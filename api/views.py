@@ -43,7 +43,13 @@ class BoglanishModelAPIViews(views.APIView):
     def get(self,request):
         boglanish= BoglanishModel.objects.all()
         return response.Response(BoglanishModelSerializer(boglanish,many=True).data,status=status.HTTP_200_OK)
-
+    def post(self,request):
+        boglanish_serializer = BoglanishModelSerializer(data=request.data)
+        if boglanish_serializer.is_valid():
+            boglanish_serializer.save()
+            return response.Response(boglanish_serializer.data,status=status.HTTP_201_CREATED)
+        else:
+            return response.Response({'error':boglanish_serializer.errors},status=status.HTTP_201_CREATED)
 
 class BizBoglanishUchunModeliAPIViews(views.APIView):
     def get(self,request):

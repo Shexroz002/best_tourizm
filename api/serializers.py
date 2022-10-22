@@ -40,6 +40,23 @@ class BoglanishModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = BoglanishModel
         fields = "__all__"
+        extra_kwargs = {
+            'name': {'required': True},
+            'phone_number': {'required': True},
+             'email': {'required': True},
+            'message': {'required': True},
+            
+        }
+
+    def create(self, validated_data):
+        feed = BoglanishModel.objects.create(
+            name = validated_data.get('name'),
+            phone_number = validated_data.get('phone_number'),
+            email = validated_data.get('email'),
+            message = validated_data.get('message'),
+        )
+        feed.save()
+        return feed
 
 
 class BizBoglanishUchunModelSerializerUZB(serializers.ModelSerializer):
