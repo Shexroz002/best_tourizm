@@ -22,10 +22,10 @@ class BizningGalereyamiz(models.Model):
 
 
 class BoglanishModel(models.Model):
-    name = models.CharField(max_length = 60,default='',verbose_name = "Ismi")
-    phone_number = models.CharField(max_length = 12,default='',verbose_name = "Telefon nomeri")
-    email = models.EmailField(max_length = 60,default='',verbose_name = "Email")
-    message = models.CharField(max_length = 12,default='',verbose_name = "Qoldirilgan xabar")
+    name = models.CharField(max_length = 60,default='',verbose_name = "Ismi",null=False,blank=False)
+    phone_number = models.CharField(max_length = 12,default='',verbose_name = "Telefon nomeri",null=False,blank=False)
+    email = models.EmailField(max_length = 60,default='',verbose_name = "Email",null=False,blank=False)
+    message = models.CharField(max_length = 12,default='',verbose_name = "Qoldirilgan xabar",null=False,blank=False)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
