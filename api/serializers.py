@@ -134,8 +134,7 @@ class BizningSavdoMarkazlarniRasmlariSerializer(serializers.ModelSerializer):
 
 
 class BizningSavdoMarkazlarhaqidaSerializerUZB(serializers.ModelSerializer):
-    image_file = BizningSavdoMarkazlarniRasmlariSerializer()
-
+    image_file = BizningSavdoMarkazlarniRasmlariSerializer(many=True)
     class Meta:
         model = BizningSavdoMarkazlarhaqida
         fields = ('title_uzb','image_file','date')
