@@ -41,7 +41,7 @@ class BizBoglanishUchunModel(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return self.name
+        return self.location_uzb
 
 class BizningMuzeylar(models.Model):
     name_uzb = models.CharField(max_length = 90,default='',verbose_name = "O'zbekcha nomi")
