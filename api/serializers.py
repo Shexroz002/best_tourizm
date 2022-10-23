@@ -107,20 +107,20 @@ class BizningRestoranlarniRasmlariSerializer(serializers.ModelSerializer):
 
 
 class BizningRestoranlarhaqidaSerializerUZB(serializers.ModelSerializer):
-
+    image_file=BizningRestoranlarniRasmlariSerializer(many=True)
     class Meta:
         model = BizningRestoranlarhaqida
         fields = ('title_uzb','image_file','date')
 
 
 class BizningRestoranlarhaqidaSerializerRU(serializers.ModelSerializer):
-
+    image_file=BizningRestoranlarniRasmlariSerializer(many=True)
     class Meta:
         model = BizningRestoranlarhaqida
         fields = ('title_ru','image_file','date')
 
 class BizningRestoranlarhaqidaSerializerENG(serializers.ModelSerializer):
-
+    image_file=BizningRestoranlarniRasmlariSerializer(many=True)
     class Meta:
         model = BizningRestoranlarhaqida
         fields = ('title_eng','image_file','date')
@@ -141,14 +141,14 @@ class BizningSavdoMarkazlarhaqidaSerializerUZB(serializers.ModelSerializer):
 
 
 class BizningSavdoMarkazlarhaqidaSerializerRU(serializers.ModelSerializer):
-    image_file = BizningSavdoMarkazlarniRasmlariSerializer()
+    image_file = BizningSavdoMarkazlarniRasmlariSerializer(many=True)
 
     class Meta:
         model = BizningSavdoMarkazlarhaqida
         fields = ('title_ru','image_file','date')
 
 class BizningSavdoMarkazlarhaqidaSerializerENG(serializers.ModelSerializer):
-    image_file = BizningSavdoMarkazlarniRasmlariSerializer()
+    image_file = BizningSavdoMarkazlarniRasmlariSerializer(many=True)
 
     class Meta:
         model = BizningSavdoMarkazlarhaqida
