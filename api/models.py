@@ -33,8 +33,8 @@ class BoglanishModel(models.Model):
 
 class BizBoglanishUchunModel(models.Model):
     location_uzb = models.CharField(max_length = 60,default='',verbose_name = "Manzil(Uzbek)")
-    location_ru = models.CharField(max_length = 60,default='',verbose_name = "Manzil(English)")
-    location_eng = models.CharField(max_length = 60,default='',verbose_name = "Manzil(Ruscha)")
+    location_ru = models.CharField(max_length = 60,default='',verbose_name = "Manzil(Ruscha)")
+    location_eng = models.CharField(max_length = 60,default='',verbose_name = "Manzil(English)")
     phone_number = models.CharField(max_length = 12,default='',verbose_name = "Telefon nomeri")
     email = models.EmailField(max_length = 60,default='',verbose_name = "Email")
     telegram_link = models.CharField(max_length = 12,default='',verbose_name = "Telegram link")
