@@ -26,7 +26,7 @@ class TarixiyTurizmRasmlariAPIViews(views.APIView):
         tarixy_turizm = TarixiyTurizmRasmlari.objects.all()
         if language == 'uzb':
             return response.Response(TarixiyTurizmRasmlariSerializerUZB(tarixy_turizm,many=True).data,status=status.HTTP_200_OK)
-        if language == 'ru':
+        if language == 'rus':
             return response.Response(TarixiyTurizmRasmlariSerializerRU(tarixy_turizm,many=True).data,status=status.HTTP_200_OK)
         if language == 'eng':
             return response.Response(TarixiyTurizmRasmlariSerializerENG(tarixy_turizm,many=True).data,status=status.HTTP_200_OK)
@@ -57,7 +57,7 @@ class BizBoglanishUchunModeliAPIViews(views.APIView):
         boglansh = BizBoglanishUchunModel.objects.all()
         if language == 'uzb':
             return response.Response(BizBoglanishUchunModelSerializerUZB(boglansh,many=True).data,status=status.HTTP_200_OK)
-        if language == 'ru':
+        if language == 'rus':
             return response.Response(BizBoglanishUchunModelSerializerRU(boglansh,many=True).data,status=status.HTTP_200_OK)
         if language == 'eng':
             return response.Response(BizBoglanishUchunModelSerializerENG(boglansh,many=True).data,status=status.HTTP_200_OK)
@@ -70,7 +70,7 @@ class BizningMuzeylarAPIViews(views.APIView):
         muzey = BizningMuzeylar.objects.all()
         if language == 'uzb':
             return response.Response(BizningMuzeylarSerializerUZB(muzey,many=True).data,status=status.HTTP_200_OK)
-        if language == 'ru':
+        if language == 'rus':
             return response.Response(BizningMuzeylarSerializerRU(muzey,many=True).data,status=status.HTTP_200_OK)
         if language == 'eng':
             return response.Response(BizningMuzeylarSerializerENG(muzey,many=True).data,status=status.HTTP_200_OK)
@@ -89,7 +89,7 @@ class BizningRestoranlarhaqidaAPIViews(views.APIView):
         restarant_haqida = BizningRestoranlarhaqida.objects.all()
         if language == 'uzb':
             return response.Response(BizningRestoranlarhaqidaSerializerUZB(restarant_haqida,many=True).data,status=status.HTTP_200_OK)
-        if language == 'ru':
+        if language == 'rus':
             return response.Response(BizningRestoranlarhaqidaSerializerRU(restarant_haqida,many=True).data,status=status.HTTP_200_OK)
         if language == 'eng':
             return response.Response(BizningRestoranlarhaqidaSerializerENG(restarant_haqida,many=True).data,status=status.HTTP_200_OK)
@@ -108,7 +108,7 @@ class BizningSavdoMarkazlarhaqidaAPIViews(views.APIView):
         savdo_markazlar = BizningSavdoMarkazlarhaqida.objects.all()
         if language == 'uzb':
             return response.Response(BizningSavdoMarkazlarhaqidaSerializerUZB(savdo_markazlar,many=True).data,status=status.HTTP_200_OK)
-        if language == 'ru':
+        if language == 'rus':
             return response.Response(BizningSavdoMarkazlarhaqidaSerializerRU(savdo_markazlar,many=True).data,status=status.HTTP_200_OK)
         if language == 'eng':
             return response.Response(BizningSavdoMarkazlarhaqidaSerializerENG(savdo_markazlar,many=True).data,status=status.HTTP_200_OK)
@@ -128,7 +128,7 @@ class TurizmTurlariAPIViews(views.APIView):
         turizm_turlari = TurizmTurlari.objects.all()
         if language == 'uzb':
             return response.Response(TurizmTurlariSerializerUZB(turizm_turlari,many=True).data,status=status.HTTP_200_OK)
-        if language == 'ru':
+        if language == 'rus':
             return response.Response(TurizmTurlariSerializerRU(turizm_turlari,many=True).data,status=status.HTTP_200_OK)
         if language == 'eng':
             return response.Response(TurizmTurlariSerializerENG(turizm_turlari,many=True).data,status=status.HTTP_200_OK)
@@ -141,7 +141,7 @@ class LogistikaTurlarimizAPIViews(views.APIView):
         logistika_turlari = LogistikaTurlarimiz.objects.all()
         if language == 'uzb':
             return response.Response(LogistikaTurlarimizSerializerUZB(logistika_turlari,many=True).data,status=status.HTTP_200_OK)
-        if language == 'ru':
+        if language == 'rus':
             return response.Response(LogistikaTurlarimizSerializerRU(logistika_turlari,many=True).data,status=status.HTTP_200_OK)
         if language == 'eng':
             return response.Response(LogistikaTurlarimizSerializerENG(logistika_turlari,many=True).data,status=status.HTTP_200_OK)
