@@ -1,4 +1,3 @@
-from email.policy import default
 from django.db import models
 
 # Create your models here.
@@ -48,7 +47,7 @@ class MealModel(models.Model):
     meal_name = models.CharField(max_length = 100,verbose_name = "Nomi")
     meal_title = models.CharField(max_length = 100,verbose_name = "haqida malimot")
     meal_price = models.FloatField(verbose_name = "Narxi")
-    catagorya = models.IntegerField(choices=MealChoice.choices, default=MealChoice.HOTDISH,verbose_name = "Turi")
+    catagorya = models.CharField(max_length = 100,verbose_name = "Ovaqt turini kirting")
     added_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
