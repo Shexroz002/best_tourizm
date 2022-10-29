@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 
 # Create your models here.
@@ -48,6 +49,7 @@ class MealModel(models.Model):
     meal_title = models.CharField(max_length = 100,verbose_name = "haqida malimot")
     meal_price = models.FloatField(verbose_name = "Narxi")
     catagorya = models.CharField(max_length = 100,verbose_name = "Ovaqt turini kirting")
+    meal_image = models.ImageField(upload_to = 'meal_image/',null=True,blank=False,verbose_name = "Ovaqt rasm",default = 'meal_image/meal.jpg')
     added_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
