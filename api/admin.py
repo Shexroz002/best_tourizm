@@ -3,7 +3,7 @@ from .models import TarixiyTurizmRasmlari,BizningGalereyamiz,BoglanishModel,\
                     BizBoglanishUchunModel,BizningMuzeylar,BizningRestoranlarniRasmlari,\
                     BizningRestoranlarhaqida,BizningSavdoMarkazlarniRasmlari,KorgazmalarRasmlari,\
                     TurizmTurlari,LogistikaTurlarimiz,BizningLogistikaRasmlari,Xodimlar,\
-                    BizningSavdoMarkazlarhaqida
+                    BizningSavdoMarkazlarhaqida,SafarTurizmRasmlari
 # Register your models here.
 admin.site.register(TarixiyTurizmRasmlari)
 admin.site.register(BizningGalereyamiz)
@@ -19,3 +19,4 @@ admin.site.register(LogistikaTurlarimiz)
 admin.site.register(BizningLogistikaRasmlari)
 admin.site.register(Xodimlar)
 admin.site.register(BizningSavdoMarkazlarhaqida)
+admin.site.register(SafarTurizmRasmlari)
