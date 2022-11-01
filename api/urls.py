@@ -3,10 +3,11 @@ from .views import TarixiyTurizmRasmlariAPIViews,BizningGalereyamizAPIViews,Bogl
                    BizBoglanishUchunModeliAPIViews,BizningMuzeylarAPIViews,BizningRestoranlarniRasmlariAPIViews,\
                    BizningRestoranlarhaqidaAPIViews,BizningSavdoMarkazlarniRasmlariAPIViews,BizningSavdoMarkazlarhaqidaAPIViews,\
                    KorgazmalarRasmlariAPIViews,TurizmTurlariAPIViews,LogistikaTurlarimizAPIViews,\
-                   BizningLogistikaRasmlariAPIViews
+                   BizningLogistikaRasmlariAPIViews,SafarTurizmRasmlariAPIViews
 
 urlpatterns = [
     path('tarixiy/turizm/rasmlar',TarixiyTurizmRasmlariAPIViews.as_view()),
+    path('safar/turizm/rasmlar',SafarTurizmRasmlariAPIViews.as_view()),
     path('bizning/galeryamiz',BizningGalereyamizAPIViews.as_view()),
     path('biz/bilan/boglanish',BoglanishModelAPIViews.as_view()),
     path('client/bilan/boglanish',BizBoglanishUchunModeliAPIViews.as_view()),

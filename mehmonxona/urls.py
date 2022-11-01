@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import  AboutPageAPIViews,HotelLocationModelAPIViews,RoomsAPIViews,\
-                    MealModelAPIViews,OpenAndCloseHourAPIViews,HotelRoomImageAPIViews
+                    MealModelAPIViews,OpenAndCloseHourAPIViews,HotelRoomImageAPIViews,\
+                    CustomerMassageModelAPIViews
 
 urlpatterns = [
     path('about/page',AboutPageAPIViews.as_view()),
@@ -9,5 +10,6 @@ urlpatterns = [
     path('meals/',MealModelAPIViews.as_view()),
     path('open/and/close',OpenAndCloseHourAPIViews.as_view()),
     path('rooms/images',HotelRoomImageAPIViews.as_view()),
+    path('customer/message',CustomerMassageModelAPIViews.as_view()),
 ]
                     

@@ -3,7 +3,7 @@ from .models import TarixiyTurizmRasmlari,BizningGalereyamiz,BoglanishModel,\
                     BizBoglanishUchunModel,BizningMuzeylar,BizningRestoranlarniRasmlari,\
                     BizningRestoranlarhaqida,BizningSavdoMarkazlarniRasmlari,KorgazmalarRasmlari,\
                     TurizmTurlari,LogistikaTurlarimiz,BizningLogistikaRasmlari,Xodimlar,\
-                    BizningSavdoMarkazlarhaqida
+                    BizningSavdoMarkazlarhaqida,SafarTurizmRasmlari
 from .serializers import TarixiyTurizmRasmlariSerializerUZB,TarixiyTurizmRasmlariSerializerRU,TarixiyTurizmRasmlariSerializerENG,\
                         BizningGalereyamizSerializer,BoglanishModelSerializer,\
                         BizBoglanishUchunModelSerializerUZB,BizBoglanishUchunModelSerializerRU,BizBoglanishUchunModelSerializerENG,\
@@ -15,7 +15,8 @@ from .serializers import TarixiyTurizmRasmlariSerializerUZB,TarixiyTurizmRasmlar
                         KorgazmalarRasmlariSerializer,\
                         TurizmTurlariSerializerUZB,TurizmTurlariSerializerRU,TurizmTurlariSerializerENG,\
                         LogistikaTurlarimizSerializerUZB,LogistikaTurlarimizSerializerENG,LogistikaTurlarimizSerializerRU,\
-                        BizningLogistikaRasmlariSerializer, XodimlarSerializer                    
+                        BizningLogistikaRasmlariSerializer, XodimlarSerializer,SafarTurizmRasmlariSerializerUZB,\
+                        SafarTurizmRasmlariSerializerRU,SafarTurizmRasmlariSerializerENG                   
 from rest_framework import status
 from rest_framework import response
 from rest_framework import views
@@ -31,6 +32,21 @@ class TarixiyTurizmRasmlariAPIViews(views.APIView):
         if language == 'eng':
             return response.Response(TarixiyTurizmRasmlariSerializerENG(tarixy_turizm,many=True).data,status=status.HTTP_200_OK)
         return response.Response(TarixiyTurizmRasmlariSerializerUZB(tarixy_turizm,many=True).data,status=status.HTTP_200_OK)
+
+class SafarTurizmRasmlariAPIViews(views.APIView):
+    def get(self,request):
+        language  = request.GET.get('language', None)
+        safar_turizm = SafarTurizmRasmlari.objects.all()
+        if language == 'uzb':
+            return response.Response(SafarTurizmRasmlariSerializerUZB(safar_turizm,many=True).data,status=status.HTTP_200_OK)
+        if language == 'rus':
+            return response.Response(SafarTurizmRasmlariSerializerRU(safar_turizm,many=True).data,status=status.HTTP_200_OK)
+        if language == 'eng':
+            return response.Response(SafarTurizmRasmlariSerializerENG(safar_turizm,many=True).data,status=status.HTTP_200_OK)
+        return response.Response(SafarTurizmRasmlariSerializerUZB(safar_turizm,many=True).data,status=status.HTTP_200_OK)
+
+
+
 
 
 class BizningGalereyamizAPIViews(views.APIView):

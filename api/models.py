@@ -6,6 +6,21 @@ class TarixiyTurizmRasmlari(models.Model):
     name_uzb = models.CharField(max_length = 90,default='',verbose_name = "O'zbekcha nomi")
     name_ru = models.CharField(max_length = 90 ,default='',verbose_name = "Ruscha nomi")
     name_eng = models.CharField(max_length = 90,default='',verbose_name = "Inglizcha nomi")
+    title_uzb = models.CharField(max_length = 90,default='',verbose_name = "O'zbekcha haqida malimot")
+    title_ru = models.CharField(max_length = 90 ,default='',verbose_name = "Ruscha haqida malimot")
+    title_eng = models.CharField(max_length = 90,default='',verbose_name = "Inglizcha haqida malimot")
+    image_file  = models.ImageField(upload_to = 'tarixiy_turizm_rasmlari/',null=False,blank = False,verbose_name = "Rasm faylni kirting")
+    date = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.name_uzb
+
+class SafarTurizmRasmlari(models.Model):
+    name_uzb = models.CharField(max_length = 90,default='',verbose_name = "O'zbekcha nomi")
+    name_ru = models.CharField(max_length = 90 ,default='',verbose_name = "Ruscha nomi")
+    name_eng = models.CharField(max_length = 90,default='',verbose_name = "Inglizcha nomi")
+    title_uzb = models.CharField(max_length = 90,default='',verbose_name = "O'zbekcha haqida malimot")
+    title_ru = models.CharField(max_length = 90 ,default='',verbose_name = "Ruscha haqida malimot")
+    title_eng = models.CharField(max_length = 90,default='',verbose_name = "Inglizcha haqida malimot")
     image_file  = models.ImageField(upload_to = 'tarixiy_turizm_rasmlari/',null=False,blank = False,verbose_name = "Rasm faylni kirting")
     date = models.DateTimeField(auto_now_add=True)
     def __str__(self):

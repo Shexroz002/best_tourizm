@@ -3,7 +3,7 @@ from .models import TarixiyTurizmRasmlari,BizningGalereyamiz,BoglanishModel,\
                     BizBoglanishUchunModel,BizningMuzeylar,BizningRestoranlarniRasmlari,\
                     BizningRestoranlarhaqida,BizningSavdoMarkazlarniRasmlari,KorgazmalarRasmlari,\
                     TurizmTurlari,LogistikaTurlarimiz,BizningLogistikaRasmlari,Xodimlar,\
-                    BizningSavdoMarkazlarhaqida
+                    BizningSavdoMarkazlarhaqida,SafarTurizmRasmlari
     
 
 
@@ -27,6 +27,23 @@ class TarixiyTurizmRasmlariSerializerENG(serializers.ModelSerializer):
         model = TarixiyTurizmRasmlari
         fields = ('name_eng','image_file','date')
 
+class SafarTurizmRasmlariSerializerUZB(serializers.ModelSerializer):
+
+    class Meta:
+        model = TarixiyTurizmRasmlari
+        fields = ('name_uzb','title_uzb','image_file','date')
+
+class SafarTurizmRasmlariSerializerRU(serializers.ModelSerializer):
+
+    class Meta:
+        model = TarixiyTurizmRasmlari
+        fields = ('name_ru','title_ru','image_file','date')
+
+class SafarTurizmRasmlariSerializerENG(serializers.ModelSerializer):
+
+    class Meta:
+        model = TarixiyTurizmRasmlari
+        fields = ('name_eng','title_eng','image_file','date')
 
 class BizningGalereyamizSerializer(serializers.ModelSerializer):
 
