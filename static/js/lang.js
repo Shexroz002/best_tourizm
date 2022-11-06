@@ -5,10 +5,15 @@ const langArr = {
         "uzb" : "Navoiy milliy turistik markazi"
     },
     "head_title" : {
-        "eng" : "Navoi Tourism Development Center",
-        "rus" : "Навоийский Центр Развития Туризма",
-        "uzb" : "Navoiy Turizmni Rivojlantirish Markazi"
+        "eng" : "Main Department of Tourism and Cultural Heritage of Navoi Province",
+        "rus" : "Главное управление туризма и культурного наследия Навоийской области",
+        "uzb" : "Navoiy Viloyati Turizm Va Madaniy Meros Bosh Boshqarmasi"
     }, 
+    "navlink_0" : {
+        "eng" : "Home page",
+        "rus" : "Главный страница",
+        "uzb" : "Bosh sahifa"
+    },
     "navlink_1" : {
         "eng" : "Tour packages",
         "rus" : "Турпакеты",

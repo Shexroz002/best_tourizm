@@ -26,3 +26,12 @@ class Lagistika(View):
 class TourismLaws(View):
     def get(self,request):
         return render(request, 'tourismLaws.html')
+
+class News(View):
+    def get(self,request):
+        return render(request, 'news.html')
+
+
+class NewsDetail(View):
+    def get(self,request):
+        return render(request, 'newsId.html')

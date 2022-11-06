@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import TurPaketlar,Services,TypeTurism,Lagistika,TourismLaws
+from .views import TurPaketlar,Services,TypeTurism,Lagistika,TourismLaws,News,NewsDetail
 
 urlpatterns = [
-    path('', TurPaketlar.as_view()),
+    path('', News.as_view()),
+    path('news/1', NewsDetail.as_view()),
     path('services/', Services.as_view()),
     path('typeturizm/', TypeTurism.as_view()),
     path('logistika/', Lagistika.as_view()),

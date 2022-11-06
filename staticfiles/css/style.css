@@ -117,7 +117,7 @@ section{
 }
 
 header{
-	z-index: 999;
+	z-index: 9999;
 	position: fixed;
 	width: 100%;
 	height: calc(1rem +5rem);
@@ -127,6 +127,12 @@ header{
 	justify-content: center;
 	transition: 0.5s ease;
 	transition-property: height, background;
+}
+
+header{
+	top: 55px;
+	background: #162e44;
+	padding: 5px 0px;
 }
 
 header.active{
@@ -142,7 +148,7 @@ header nav{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0px 11rem;
+	padding: 0px 8rem;
 }
 
 .nav-close-btn, .nav-menu-btn{
@@ -493,6 +499,10 @@ header nav ul li a:hover{
   padding: 4rem;
 }
 
+.trandingnews{
+	padding: 4rem 8rem;
+}
+
 .tranding .swiper {
 	width: 100%;
 	padding-top: 0px;
@@ -504,23 +514,20 @@ header nav ul li a:hover{
 	background-position: center;
 	background-size: cover;
 	width: 500px;
-	height: 500px;
+	height: 450px;
+	border: 1px solid #ccc;
 }
 
 .tranding .swiper-slide img {
 	width: 100%;
-	height: 100%;
+	height: 350px;
 	display: block;
 	object-fit: cover;
 }
 
-.effect-text{
-	position: absolute;
-	bottom: 10px;
-	font-size: 30px;
-    color: #fff;
-	padding-top: 10px;
-	left: 40%;
+.tranding .swiper-slide h3{
+	font-size: 20px;
+	color: black;
 }
 
 .tranding .swiper-pagination-bullet{
@@ -548,6 +555,7 @@ header nav ul li a:hover{
 .ourService {
     padding: 0px 9rem;
 }
+
 
 .section-text{
 	text-align: center;
@@ -599,6 +607,7 @@ header nav ul li a:hover{
 	line-height: 24px;
 	letter-spacing: 2px;
 }
+
 /*  our servecis  */
 
 
@@ -1601,5 +1610,398 @@ footer .foot-bottom a:hover{
 	}
 	.card-logo .card-logo-container .bg-img{
         height: 300px;
+	}
+}
+
+.trandingnews .swiper-slide {
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	width: 500px;
+	height: 500px;
+	border: 1px solid #ccc;
+}
+
+.trandingnews .news-img-text img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+}
+
+.trandingnews a{
+	text-decoration: none;
+}
+
+.trandingnews a .news-img-text{
+   position: absolute;
+   top: 0%;
+   left: 0%;
+   right: 0%;
+}
+
+.trandingnews .img-news-text .news-icons-hover{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+
+.trandingnews .img-news-text{
+	position: relative;
+	width: 100%;
+	height: 250px;
+	z-index: 999;
+	transition: all 0.5s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.trandingnews .img-news-text:hover{
+	background: linear-gradient(135deg, #000428, #0074da);
+	opacity: 0.7;
+}
+
+.trandingnews .img-news-text:hover .news-icons-hover{
+    opacity: 1;
+	transition: all 0.5s ease;
+}
+
+.trandingnews .img-news-text .news-icons-hover .uil-search{
+	font-size: 32px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.trandingnews .img-news-text .news-icons-hover .eye-icons{
+	padding-top: 20px;
+	color: #fff;
+	font-size: 20px;
+}
+
+.trandingnews a h3{
+	color: #000428;
+	font-size: 20px;
+	transition: all 0.3s ease;
+	padding-top: 6px;
+	padding-left: 6px;
+}
+
+.trandingnews a h3:hover{
+	text-decoration: underline;
+}
+
+.trandingnews .swiper-slide p{
+	color: #212529;
+	font-size: 16px;
+	padding-left: 6px;
+}
+
+.trandingnews .icons-date{
+	display: flex;
+	gap: 10px;
+	padding-left: 6px;
+}
+
+.trandingnews .box-btn-news{
+	display: flex;
+	justify-content: center;
+}
+
+.trandingnews .box-btn-news .btn-news{
+	width: 80%;
+	padding: 7px 20px;
+	color: #000428;
+	border: 1px solid #000428;
+	border-radius: 10px;
+	font-size: 17px;
+	margin-top: 10px;
+	background: #fff;
+	transition: all 0.4s ease;
+	text-align: center;
+}
+
+.trandingnews .box-btn-news .btn-news:hover{
+    background-color: #000428;
+	color: #fff;
+}
+
+.statistics {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0px 9rem;
+	height: 500px;
+    background-image: url('./../images/statistika3.jpg');
+    background-size: cover;
+}
+
+.statistics-section{
+	width: 100%;
+}
+
+.statistics .row{
+	display: flex;
+	justify-content: space-between;
+}
+
+.statistics .row .col-2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.statistics .row img{
+	width: 50px;
+	height:50px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.statistics .row .icons-static{
+	box-shadow: 0 10px 10px rgb(255 255 255 / 30%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	background-color: #fff;
+	box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.statistics .row h4{
+	font-size: 24px;
+	color: #fff;
+	font-weight: 500;
+	padding-top: 10px;
+}
+
+.statistics-section h3{
+	font-size: 34px;
+	padding-bottom: 2rem;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.main-banner{
+	width: 100%;
+	height: 400px;
+	background-image: url('./../images/main-banner3.jpg');
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.main-banner h1{
+	font-size: 40px;
+	color: #eeeeee;
+}
+
+.main-news-card{
+   padding: 25px 11rem;
+}
+
+.card-container{
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px 0 rgb(0 0 0 / 7%);
+}
+
+.card-container p{
+	margin: 0;
+}
+
+.about-news{
+	padding: 0px 11.75rem 20px 11.75rem;
+}
+
+.information-container .big-card img{
+	width: 100%;
+	height: 450px;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+
+.information-container .big-card{
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 5px 15px 0 rgb(0 0 0 / 7%);
+	padding: 25px;
+}
+
+.information-container .big-card p,
+.information-container .big-card span,
+.information-container .big-card h5,
+.information-container .big-card p
+{
+	margin: 0;
+	padding: 0;
+}
+
+.information-container .big-card .info-time{
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 12px;
+	color: #777777;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.information-container .big-card h5{
+	font-size: 14px;
+	color: #000;
+	font-weight: bold;
+	padding-bottom: 1rem;
+}
+
+.information-container .big-card p{
+	line-height: 1.5;
+	padding-bottom: 10px;
+}
+
+.information-container .small-card{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.information-container .small-card .news-card1, .information-container .small-card .news-card2{
+    padding: 15px;
+	width: 90%;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0px 5px 15px 0 rgb(0 0 0 / 7%);
+}
+
+.information-container .small-card img{
+	width: 70px;
+	height: 60px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.information-container .small-card ul{
+	padding: 0;
+	margin: 0;
+}
+
+.information-container .small-card h4{
+   font-size: 18px;
+   padding: 10px;
+   border-bottom: 1px solid #ececec;
+   margin-bottom: 10px;
+}
+
+.information-container .small-card ul li{
+	display: flex;
+	gap: 10px;
+	padding-bottom: 15px;
+}
+
+.information-container .small-card ul li span{
+	font-size: 12px;
+	color: #d32f2f;
+}
+
+.information-container .small-card ul li a{
+	font-size: 14px;
+	color: #333333;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	display: block;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+.information-container .small-card ul li a:hover{
+	color: #d32f2f;
+}
+
+.information-container .small-card ul .news-card1-eye, 
+.information-container .small-card ul .news-card1-eye span{
+   font-size: 14px;
+   font-weight: bold;
+   color: #000;
+}
+
+
+@media (max-width: 991px){
+	.information-container .big-card img{
+		height: 420px;
+	}
+	.information-container .big-card{
+		margin-bottom: 15px;
+	}
+	.main-banner h1{
+		font-size: 34px;
+		padding: 0px 10px;
+	}
+	.main-news-card{
+		padding: 25px 6rem;
+	 }
+	 .about-news{
+		padding: 0px 6.75rem 20px 6.75rem;
+	}
+	.information-container .small-card .news-card1, .information-container .small-card .news-card2{
+		width: 100%;
+	}
+}
+
+@media (max-width: 768px){
+	.main-banner h1{
+		font-size: 34px;
+		padding: 0px 10px;
+	}
+	.information-container .big-card img{
+		height: 380px;
+	}
+	.main-news-card{
+		padding: 25px 4rem;
+	 }
+	 .about-news{
+		padding: 0px 4.75rem 20px 4.75rem;
+	}
+	.main-banner{
+		height: 350px;
+	}
+}
+
+@media (max-width: 500px){
+	.main-banner h1{
+		font-size: 28px;
+		padding: 0px 10px;
+	}
+	.information-container .big-card img{
+		height: 340px;
+	}
+	.main-news-card{
+		padding: 20px 2rem;
+	 }
+	 .about-news{
+		padding: 0px 2.75rem 20px 2.75rem;
+	}
+	.main-banner{
+		height: 320px;
+	}
+}
+
+@media (max-width: 400px){
+	.main-news-card{
+		padding: 15px 1rem;
+	 }
+	 .about-news{
+		padding: 0px 1.75rem 15px 1.75rem;
+	}
+	.information-container .big-card img{
+		height: 300px;
 	}
 }

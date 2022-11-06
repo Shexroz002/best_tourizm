@@ -2,28 +2,29 @@ let hash = window.location.hash;
 hash = hash.substring(1)
 
 //tarixiy joylar
-// fetch( `https://navoiytourizm.pythonanywhere.com/api/tarixiy/turizm/rasmlar?language=${hash}`)
-//     .then( response => response.json() )
-//     .then(response => {
-//         let historicalSection = document.querySelector("#tarixiy_joylar");
-//         let swapHistorical = "";
-//         let allImgs = [];
-//         allImgs = response;
-//         if(allImgs?.length > 0){
-//           allImgs?.map((item) => {
-//             swapHistorical += `
-//             <div class="swiper-slide">
-//                <img src='./../images/foto1.jpg' />
-//                <div class="effect-text">${hash === 'uzb' ? item?.name_uzb: ''}</div>
-//             </div>
-//             `
-//           })
-//           historicalSection.innerHTML = swapHistorical
-//         }
-//        console.log("Response : ", response)
-//     }).catch(error => {
-//         console.log("Error : ", error)
-// })
+fetch( `https://navoiytourizm.pythonanywhere.com/api/tarixiy/turizm/rasmlar?language=${hash}`)
+    .then( response => response.json() )
+    .then(response => {
+        let historicalSection = document.querySelector("#tarixiy_joylar");
+        let swapHistorical = "";
+        let allImgs = [];
+        allImgs = response;
+        if(allImgs?.length > 0){
+          allImgs?.map((item) => {
+            swapHistorical += `
+            <div class="swiper-slide">
+              <img src="${item?.image_file}" />
+              <h3>${hash === 'uzb' ? item?.name_uzb: ''}</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, pariatur!</p>
+            </div>
+            `
+          })
+          historicalSection.innerHTML = swapHistorical
+        }
+       console.log("Tarixiy joylar : ", response)
+    }).catch(error => {
+        console.log("Error : ", error)
+})
 
 // bizning galereyamiz
 fetch( `https://navoiytourizm.pythonanywhere.com/api/bizning/galeryamiz`)
@@ -38,7 +39,8 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/bizning/galeryamiz`)
             swapHistorical1 += `
             <div class="swiper-slide" data-aos="fade-down" data-aos-duration="800">
             <div class="swiper-slide">
-               <img src='${item?.image_file}' alt="">
+                <img src='${item?.image_file}' alt="">
+
             </div>
             </div>
             `

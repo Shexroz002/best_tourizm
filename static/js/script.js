@@ -51,28 +51,35 @@ closeBtn.addEventListener('click', () =>{
   headerUl.classList.remove('active')
 })
 
-
-/* trandiing */
 var swiper = new Swiper(".Effect-overflow", {
   loop: true,
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  autoplay: {
-    delay: 4000,
-  },
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 2.5,
-  },
+  spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-}); 
+  autoplay: {
+    delay: 4000,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
+  },
+});
 /* trandiing */
 
 
@@ -103,6 +110,36 @@ var swiper = new Swiper(".card_slider", {
     },
     1200: {
       slidesPerView: 4,
+    },
+  },
+});
+
+var swiper = new Swiper(".newsSection", {
+  loop: true,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 4000,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 3,
     },
   },
 });
