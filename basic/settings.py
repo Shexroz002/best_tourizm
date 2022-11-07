@@ -42,10 +42,12 @@ INSTALLED_APPS = [
     "corsheaders",
     'tourizm',
     'mehmonxona',
+   
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
@@ -122,12 +124,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [
-  # Tell Django where to look for React's static files (css, js)
-  os.path.join(BASE_DIR, "staticfiles"),
-]
-MEDIA_ROOT = BASE_DIR / 'media' # 'data' is my media folder
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = '/home/navoiytr/navoiytravel.uz/django/staticfiles'
+STATICFILES_DIRS = ('/home/navoiytr/navoiytravel.uz/django/static',)
+MEDIA_ROOT = '/home/navoiytr/navoiytravel.uz/django/media'
 MEDIA_URL = '/media/'
 
 # Default primary key field type
