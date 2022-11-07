@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_x16a@n6japlcs*rfd)t8w9^legg+g=9+)3!lm&sze3(ljm$%b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 import os
 ALLOWED_HOSTS = ["*"]
 
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "corsheaders",
     'tourizm',
     'mehmonxona',
-    'whitenoise',
+   
 ]
 
 MIDDLEWARE = [
@@ -126,7 +126,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = '/home/navoiytr/navoiytravel.uz/django/staticfiles'
-STATICFILES_DIRS = '/home/navoiytr/navoiytravel.uz/django/static'
+STATICFILES_DIRS = ('/home/navoiytr/navoiytravel.uz/django/static',)
 MEDIA_ROOT = '/home/navoiytr/navoiytravel.uz/django/media'
 MEDIA_URL = '/media/'
 
