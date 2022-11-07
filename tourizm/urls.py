@@ -4,6 +4,7 @@ from .views import TurPaketlar,Services,TypeTurism,Lagistika,TourismLaws,News,Ne
 urlpatterns = [
     path('', News.as_view()),
     path('news/1', NewsDetail.as_view()),
+    path('tur/paketlari', TurPaketlar.as_view()),
     path('services/', Services.as_view()),
     path('typeturizm/', TypeTurism.as_view()),
     path('logistika/', Lagistika.as_view()),
