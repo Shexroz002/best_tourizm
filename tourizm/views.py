@@ -35,3 +35,7 @@ class News(View):
 class NewsDetail(View):
     def get(self,request):
         return render(request, 'newsId.html')
+
+class Mehmonxona(View):
+    def get(self,request):
+        return render(request, 'mehmonxona.html')
