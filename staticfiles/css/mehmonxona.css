@@ -5,7 +5,7 @@
         sans-serif;
     --primaryColor: #C59D5F;
     --primaryHoverColor: #2a2a2a;
-    --primaryBackground: #2a2a2a;
+    --primarybackground: #2a2a2a;
     --primaryTransition: all 0.3s linear;
     --primaryOpacity: 1;
     --primaryMargin: 10px;
@@ -14,7 +14,7 @@
         sans-serif;
     --secondaryColor: #fff;
     --secondaryHoverColor: #000;
-    --secondaryBackground: #191919;
+    --secondarybackground: #191919;
     --secondaryTransition: all 0.5s linear;
     --accentFontFamily: 'Playball',
         cursive;
@@ -229,37 +229,37 @@ html {
 }
 
 .slider-1 {
-    background: url('./Images/Background/bg-new-1.jpg');
+    background: url('/static/images/background/bg-new-1.jpg');
     background-position: 100% 100% !important;
 }
 
 .slider-2 {
-    background: url('./Images/Background/bg-new2.jpg');
+    background: url('/static/images/background/bg-new2.jpg');
     background-position: 100% 100% !important;
 }
 
 .slider-3 {
-    background: url('./Images/Background/bg-new3.jpg');
+    background: url('/static/images/background/bg-new3.jpg');
     background-position: top left !important;
 }
 
 .slider-4 {
-    background: url('./Images/Background/bg-new4.jpg');
+    background: url('/static/images/background/bg-new4.jpg');
     background-position: 100% 100%;
 }
 
 .slider-5 {
-    background: url('./Images/Background/bg-new-5.jpg');
+    background: url('/static/images/background/bg-new-5.jpg');
     background-position: top left;
 }
 
 .slider-6 {
-    background: url('./Images/Background/bg-new-6.jpg');
+    background: url('/static/images/background/bg-new-6.jpg');
     background-position: 100% 90%;
 }
 
 .slider-7 {
-    background: url('./Images/Background/bg-new-7.jpg');
+    background: url('/static/images/background/bg-new-7.jpg');
     background-position: center;
 }
 
@@ -451,47 +451,47 @@ html {
 }
 
 .about-img-1 {
-    background: url('./Images/Gallery/hotel1.jpg');
+    background: url('/static/images/gallery/hotel1.jpg');
 }
 
 .about-img-2 {
-    background: url('./Images/Gallery/hotel2.jpg');
+    background: url('/static/images/gallery/hotel2.jpg');
 }
 
 .about-img-3 {
-    background: url('./Images/Gallery/hotel3.jpg');
+    background: url('/static/images/gallery/hotel3.jpg');
 }
 
 .about-img-4 {
-    background: url('./Images/Gallery/hotel4.jpg');
+    background: url('/static/images/gallery/hotel4.jpg');
 }
 
 .about-img-5 {
-    background: url('./Images/Gallery/hotel5.jpg');
+    background: url('/static/images/gallery/hotel5.jpg');
 }
 
 .about-img-6 {
-    background: url('./Images/Gallery/hotel6.jpg');
+    background: url('/static/images/gallery/hotel6.jpg');
 }
 
 .about-img-7 {
-    background: url('./Images/Gallery/hotel7.jpg');
+    background: url('/static/images/gallery/hotel7.jpg');
 }
 
 .about-img-8 {
-    background: url('./Images/Gallery/hotel8.jpg');
+    background: url('/static/images/gallery/hotel8.jpg');
 }
 
 .about-img-9 {
-    background: url('./Images/Gallery/hotel9.jpg');
+    background: url('/static/images/gallery/hotel9.jpg');
 }
 
 .about-img-10 {
-    background: url('./Images/Gallery/hotel10.jpeg');
+    background: url('/static/images/gallery/hotel10.jpeg');
 }
 
 .about-img-11 {
-    background: url('./Images/Gallery/hotel11.jpg');
+    background: url('/static/images/gallery/hotel11.jpg');
 }
 
 .about-title {
@@ -731,7 +731,7 @@ html {
 .schedule::after {
     content: '';
     position: absolute;
-    background: url('./Images/Icons/ver-separator.png');
+    background: url('/static/images/icons/ver-separator.png');
     width: 20px;
     height: 144px;
     background-repeat: repeat-y;
@@ -822,47 +822,47 @@ h1:nth-of-type(3) {
 }
 
 .discover-img-1 {
-    background: url('./Images/Gallery/hotel-room.jpg');
+    background: url('/static/images/gallery/hotel-room.jpg');
 }
 
 .discover-img-2 {
-    background: url('./Images/Gallery/room-2.jpg');
+    background: url('/static/images/gallery/room-2.jpg');
 }
 
 .discover-img-3 {
-    background: url('./Images/Gallery/room-3.jpg');
+    background: url('/static/images/gallery/room-3.jpg');
 }
 
 .discover-img-4 {
-    background: url('./Images/Gallery/room-4.jpg');
+    background: url('/static/images/gallery/room-4.jpg');
 }
 
 .discover-img-5 {
-    background: url('./Images/Gallery/room-5.jpg');
+    background: url('/static/images/gallery/room-5.jpg');
 }
 
 .discover-img-6 {
-    background: url('./Images/Gallery/room-6.jpg');
+    background: url('/static/images/gallery/room-6.jpg');
 }
 
 .discover-img-7 {
-    background: url('./Images/Gallery/room-7.jpg');
+    background: url('/static/images/gallery/room-7.jpg');
 }
 
 .discover-img-8 {
-    background: url('./Images/Gallery/room-8.jpg');
+    background: url('/static/images/gallery/room-8.jpg');
 }
 
 .discover-img-9 {
-    background: url('./Images/Gallery/room-9.jpg');
+    background: url('/static/images/gallery/room-9.jpg');
 }
 
 .discover-img-10 {
-    background: url('./Images/Gallery/room-10.jpg');
+    background: url('/static/images/gallery/room-10.jpg');
 }
 
 .discover-img-11 {
-    background: url('./Images/Gallery/room-11.jpg');
+    background: url('/static/images/gallery/room-11.jpg');
 }
 
 /* SECTION - 4 MEDIA QUERY START */
@@ -908,7 +908,7 @@ h1:nth-of-type(3) {
     min-height: calc(120vh);
     align-items: center !important;
     justify-content: center !important;
-    background: url('./Images/Gallery/2.jpg');
+    background: url('/static/images/gallery/2.jpg');
     background-repeat: no-repeat;
     background-size: cover !important;
     background-attachment: fixed;
@@ -1049,7 +1049,7 @@ h1:nth-of-type(3) {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    background: url('./Images/Gallery/4.jpg');
+    background: url('/static/images/gallery/4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1259,7 +1259,7 @@ h1:nth-of-type(3) {
     justify-content: center;
     min-height: calc(70vh);
     position: relative;
-    background: url('./Images/Gallery/restaurant\ kitchen.jpeg');
+    background: url('/static/images/gallery/restaurant/kitchen.jpeg');
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1388,7 +1388,7 @@ h1:nth-of-type(3) {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: url('./Images/Slider/8.jpg');
+    background: url('/static/images/slider/8.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1565,7 +1565,7 @@ h1:nth-of-type(3) {
 
     min-height: 70vh;
 
-    background: url('./Images/Gallery/contact.jpg');
+    background: url('/static/images/gallery/contact.jpg');
 
     background-position: top center;
 
@@ -1679,9 +1679,9 @@ h1:nth-of-type(3) {
 }
 
 .get-in-touch-btn:hover {
-    background: var(--secondaryBackground);
+    background: var(--secondarybackground);
     color: var(--primaryColor);
-    border: 1px solid var(--secondaryBackground);
+    border: 1px solid var(--secondarybackground);
 }
 
 /* SECTION - 14 MEDIA QUERY START */
@@ -1729,7 +1729,7 @@ h1:nth-of-type(3) {
 .testimonials {
     min-height: calc(100vh - 100px);
     position: relative;
-    background: url('./Images/Gallery/review.jpg');
+    background: url('/static/images/gallery/review.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
