@@ -3,7 +3,8 @@ from .models import TarixiyTurizmRasmlari,BizningGalereyamiz,BoglanishModel,\
                     BizBoglanishUchunModel,BizningMuzeylar,BizningRestoranlarniRasmlari,\
                     BizningRestoranlarhaqida,BizningSavdoMarkazlarniRasmlari,KorgazmalarRasmlari,\
                     TurizmTurlari,LogistikaTurlarimiz,BizningLogistikaRasmlari,Xodimlar,\
-                    BizningSavdoMarkazlarhaqida,SafarTurizmRasmlari
+                    BizningSavdoMarkazlarhaqida,SafarTurizmRasmlari,YangiliklarModel,\
+                    ExtremalTurizmModel,EtnikTurizmModel
     
 
 
@@ -231,3 +232,67 @@ class XodimlarSerializer(serializers.ModelSerializer):
     class Meta:
         model = Xodimlar
         fields = "__all__"
+
+
+class YangiliklarModelSerializerUZB(serializers.ModelSerializer):
+
+    class Meta:
+        model = YangiliklarModel
+        fields = ('name_uzb','title_uzb','image_file','date')
+
+
+class YangiliklarModelSerializerRU(serializers.ModelSerializer):
+
+    class Meta:
+        model = YangiliklarModel
+        fields = ('name_ru','title_ru','image_file','date')
+
+
+class YangiliklarModelSerializerENG(serializers.ModelSerializer):
+
+    class Meta:
+        model = YangiliklarModel
+        fields = ('name_eng','title_eng','image_file','date')
+
+
+class EtnikTurizmModelSerializerUZB(serializers.ModelSerializer):
+
+    class Meta:
+        model = EtnikTurizmModel
+        fields = ('name_uzb','title_uzb','image_file','date')
+
+
+class EtnikTurizmModelSerializerRU(serializers.ModelSerializer):
+
+    class Meta:
+        model = EtnikTurizmModel
+        fields = ('name_ru','title_ru','image_file','date')
+
+
+class EtnikTurizmModelSerializerENG(serializers.ModelSerializer):
+
+    class Meta:
+        model = EtnikTurizmModel
+        fields = ('name_eng','title_eng','image_file','date')
+
+
+
+class ExtremalTurizmModelSerializerUZB(serializers.ModelSerializer):
+
+    class Meta:
+        model = ExtremalTurizmModel
+        fields = ('name_uzb','title_uzb','image_file','date')
+
+
+class ExtremalTurizmModelSerializerRU(serializers.ModelSerializer):
+
+    class Meta:
+        model = ExtremalTurizmModel
+        fields = ('name_ru','title_ru','image_file','date')
+
+
+class ExtremalTurizmModelSerializerENG(serializers.ModelSerializer):
+
+    class Meta:
+        model = ExtremalTurizmModel
+        fields = ('name_eng','title_eng','image_file','date')

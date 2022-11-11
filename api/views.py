@@ -1,9 +1,11 @@
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from .models import TarixiyTurizmRasmlari,BizningGalereyamiz,BoglanishModel,\
                     BizBoglanishUchunModel,BizningMuzeylar,BizningRestoranlarniRasmlari,\
                     BizningRestoranlarhaqida,BizningSavdoMarkazlarniRasmlari,KorgazmalarRasmlari,\
                     TurizmTurlari,LogistikaTurlarimiz,BizningLogistikaRasmlari,Xodimlar,\
-                    BizningSavdoMarkazlarhaqida,SafarTurizmRasmlari
+                    BizningSavdoMarkazlarhaqida,SafarTurizmRasmlari,YangiliklarModel,\
+                    EtnikTurizmModel,ExtremalTurizmModel
 from .serializers import TarixiyTurizmRasmlariSerializerUZB,TarixiyTurizmRasmlariSerializerRU,TarixiyTurizmRasmlariSerializerENG,\
                         BizningGalereyamizSerializer,BoglanishModelSerializer,\
                         BizBoglanishUchunModelSerializerUZB,BizBoglanishUchunModelSerializerRU,BizBoglanishUchunModelSerializerENG,\
@@ -16,7 +18,10 @@ from .serializers import TarixiyTurizmRasmlariSerializerUZB,TarixiyTurizmRasmlar
                         TurizmTurlariSerializerUZB,TurizmTurlariSerializerRU,TurizmTurlariSerializerENG,\
                         LogistikaTurlarimizSerializerUZB,LogistikaTurlarimizSerializerENG,LogistikaTurlarimizSerializerRU,\
                         BizningLogistikaRasmlariSerializer, XodimlarSerializer,SafarTurizmRasmlariSerializerUZB,\
-                        SafarTurizmRasmlariSerializerRU,SafarTurizmRasmlariSerializerENG                   
+                        SafarTurizmRasmlariSerializerRU,SafarTurizmRasmlariSerializerENG,YangiliklarModelSerializerENG,\
+                        YangiliklarModelSerializerRU,YangiliklarModelSerializerUZB,EtnikTurizmModelSerializerENG,\
+                        EtnikTurizmModelSerializerRU,EtnikTurizmModelSerializerUZB,ExtremalTurizmModelSerializerENG,\
+                        ExtremalTurizmModelSerializerRU,ExtremalTurizmModelSerializerUZB           
 from rest_framework import status
 from rest_framework import response
 from rest_framework import views
@@ -173,3 +178,52 @@ class XodimlarAPIViews(views.APIView):
     def get(self,request):
         xodimlar= Xodimlar.objects.all()
         return response.Response(XodimlarSerializer(xodimlar,many=True).data,status=status.HTTP_200_OK)
+
+class YangiliklarModelAPIViews(views.APIView):
+    def get(self,request):
+        language  = request.GET.get('language', None)
+        yangiliklar = YangiliklarModel.objects.all()
+        if language == 'uzb':
+            return response.Response(YangiliklarModelSerializerUZB(yangiliklar,many=True).data,status=status.HTTP_200_OK)
+        if language == 'rus':
+            return response.Response(YangiliklarModelSerializerRU(yangiliklar,many=True).data,status=status.HTTP_200_OK)
+        if language == 'eng':
+            return response.Response(YangiliklarModelSerializerENG(yangiliklar,many=True).data,status=status.HTTP_200_OK)
+        return response.Response(YangiliklarModelSerializerUZB(yangiliklar,many=True).data,status=status.HTTP_200_OK)
+
+class YangiliklarDetailModelAPIViews(views.APIView):
+    def get(self,request,id):
+        language  = request.GET.get('language', None)
+        yangiliklar = get_object_or_404(YangiliklarModel,id=id)
+        if language == 'uzb':
+            return response.Response(YangiliklarModelSerializerUZB(yangiliklar).data,status=status.HTTP_200_OK)
+        if language == 'rus':
+            return response.Response(YangiliklarModelSerializerRU(yangiliklar).data,status=status.HTTP_200_OK)
+        if language == 'eng':
+            return response.Response(YangiliklarModelSerializerENG(yangiliklar).data,status=status.HTTP_200_OK)
+        return response.Response(YangiliklarModelSerializerUZB(yangiliklar).data,status=status.HTTP_200_OK)
+
+
+class EtnikTurizmModelAPIViews(views.APIView):
+    def get(self,request):
+        language  = request.GET.get('language', None)
+        etnik = EtnikTurizmModel.objects.all()
+        if language == 'uzb':
+            return response.Response(EtnikTurizmModelSerializerUZB(etnik,many=True).data,status=status.HTTP_200_OK)
+        if language == 'rus':
+            return response.Response(EtnikTurizmModelSerializerRU(etnik,many=True).data,status=status.HTTP_200_OK)
+        if language == 'eng':
+            return response.Response(EtnikTurizmModelSerializerENG(etnik,many=True).data,status=status.HTTP_200_OK)
+        return response.Response(EtnikTurizmModelSerializerUZB(etnik,many=True).data,status=status.HTTP_200_OK)
+
+class ExtremalTurizmModelAPIViews(views.APIView):
+    def get(self,request):
+        language  = request.GET.get('language', None)
+        etnik = ExtremalTurizmModel.objects.all()
+        if language == 'uzb':
+            return response.Response(ExtremalTurizmModelSerializerUZB(etnik,many=True).data,status=status.HTTP_200_OK)
+        if language == 'rus':
+            return response.Response(ExtremalTurizmModelSerializerRU(etnik,many=True).data,status=status.HTTP_200_OK)
+        if language == 'eng':
+            return response.Response(ExtremalTurizmModelSerializerENG(etnik,many=True).data,status=status.HTTP_200_OK)
+        return response.Response(ExtremalTurizmModelSerializerUZB(etnik,many=True).data,status=status.HTTP_200_OK)

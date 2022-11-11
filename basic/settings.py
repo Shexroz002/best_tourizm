@@ -123,13 +123,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+# STATIC_URL = '/static/'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATIC_ROOT = '/home/navoiytr/navoiytravel.uz/django/staticfiles'
+# STATICFILES_DIRS = ('/home/navoiytr/navoiytravel.uz/django/static',)
+# MEDIA_ROOT = '/home/navoiytr/navoiytravel.uz/django/media'
+# MEDIA_URL = '/media/'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = '/home/navoiytr/navoiytravel.uz/django/staticfiles'
-STATICFILES_DIRS = ('/home/navoiytr/navoiytravel.uz/django/static',)
-MEDIA_ROOT = '/home/navoiytr/navoiytravel.uz/django/media'
-MEDIA_URL = '/media/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+  # Tell Django where to look for React's static files (css, js)
+  os.path.join(BASE_DIR, "static"),
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 CORS_ORIGIN_ALLOW_ALL = True
