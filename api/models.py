@@ -175,7 +175,8 @@ class YangiliklarModel(models.Model):
     title_eng = models.TextField(max_length = 5500,default='',verbose_name = "Yangilik haqida (english)")
     image_file  = models.ManyToManyField(YangiliklarRasmlari,related_name='imagefile',verbose_name = "Yangilikar haqida  rasm kirting")
     date = models.DateTimeField(auto_now_add=True) 
-
+    def __str__(self):
+        return self.name_uzb
 
 class ExtremalTurizmRasmlari(models.Model):
     name = models.CharField(max_length = 90 ,default='images',verbose_name = "Rasm nomi")
@@ -194,7 +195,8 @@ class ExtremalTurizmModel(models.Model):
     title_eng = models.TextField(max_length = 2500,default='',verbose_name = "Extremal turizm haqida malimot kirting(Eng)")
     image_file  = models.ManyToManyField(ExtremalTurizmRasmlari,related_name='imagefile',verbose_name = "exteremal turizm rasmni kirting")
     date = models.DateTimeField(auto_now_add=True)
-
+    def __str__(self):
+        return self.name_uzb
 
 class EtnikTurizmRasmlari(models.Model):
     name = models.CharField(max_length = 90 ,default='images',verbose_name = "Rasm nomi")
@@ -213,3 +215,5 @@ class EtnikTurizmModel(models.Model):
     title_eng = models.TextField(max_length = 2500,default='',verbose_name = "Etnik turizm haqida malimot kirting(Eng)")
     image_file  = models.ManyToManyField(EtnikTurizmRasmlari,related_name='Etnik',verbose_name = "Etnik turizm rasmni kirting")
     date = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.name_uzb
