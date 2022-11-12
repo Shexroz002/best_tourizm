@@ -12,27 +12,27 @@ class TarixiyTurizmRasmlariSerializerUZB(serializers.ModelSerializer):
 
     class Meta:
         model = TarixiyTurizmRasmlari
-        fields = ('name_uzb','image_file','date')
+        fields = ('id','name_uzb','image_file','date')
 
 
 class TarixiyTurizmRasmlariSerializerRU(serializers.ModelSerializer):
 
     class Meta:
         model = TarixiyTurizmRasmlari
-        fields = ('name_ru','image_file','date')
+        fields = ('id','name_ru','image_file','date')
 
 
 class TarixiyTurizmRasmlariSerializerENG(serializers.ModelSerializer):
 
     class Meta:
         model = TarixiyTurizmRasmlari
-        fields = ('name_eng','image_file','date')
+        fields = ('id','name_eng','image_file','date')
 
 class SafarTurizmRasmlariSerializerUZB(serializers.ModelSerializer):
 
     class Meta:
         model = TarixiyTurizmRasmlari
-        fields = ('name_uzb','title_uzb','image_file','date')
+        fields = ('id','name_uzb','title_uzb','image_file','date')
 
 class SafarTurizmRasmlariSerializerRU(serializers.ModelSerializer):
 
@@ -44,7 +44,7 @@ class SafarTurizmRasmlariSerializerENG(serializers.ModelSerializer):
 
     class Meta:
         model = TarixiyTurizmRasmlari
-        fields = ('name_eng','title_eng','image_file','date')
+        fields = ('id','name_eng','title_eng','image_file','date')
 
 class BizningGalereyamizSerializer(serializers.ModelSerializer):
 
@@ -81,21 +81,21 @@ class BizBoglanishUchunModelSerializerUZB(serializers.ModelSerializer):
 
     class Meta:
         model = BizBoglanishUchunModel
-        fields = ('location_uzb','phone_number','email','telegram_link','date')
+        fields = ('id','location_uzb','phone_number','email','telegram_link','date')
 
 
 class BizBoglanishUchunModelSerializerRU(serializers.ModelSerializer):
 
     class Meta:
         model = BizBoglanishUchunModel
-        fields = ('location_ru','phone_number','email','telegram_link','date')
+        fields = ('id','location_ru','phone_number','email','telegram_link','date')
 
 
 class BizBoglanishUchunModelSerializerENG(serializers.ModelSerializer):
 
     class Meta:
         model = BizBoglanishUchunModel
-        fields = ('location_eng','phone_number','email','telegram_link','date')
+        fields = ('id','location_eng','phone_number','email','telegram_link','date')
 
 class BizningMuzeylarSerializerUZB(serializers.ModelSerializer):
 
@@ -108,14 +108,14 @@ class BizningMuzeylarSerializerRU(serializers.ModelSerializer):
 
     class Meta:
         model = BizningMuzeylar
-        fields = ('name_ru','title_ru','image_file','date')
+        fields = ('id','name_ru','title_ru','image_file','date')
 
 
 class BizningMuzeylarSerializerENG(serializers.ModelSerializer):
 
     class Meta:
         model = BizningMuzeylar
-        fields = ('name_eng','title_eng','image_file','date')
+        fields = ('id','name_eng','title_eng','image_file','date')
 
 class BizningRestoranlarniRasmlariSerializer(serializers.ModelSerializer):
 
@@ -128,20 +128,20 @@ class BizningRestoranlarhaqidaSerializerUZB(serializers.ModelSerializer):
     image_file=BizningRestoranlarniRasmlariSerializer(many=True)
     class Meta:
         model = BizningRestoranlarhaqida
-        fields = ('title_uzb','image_file','date')
+        fields = ('id','title_uzb','image_file','date')
 
 
 class BizningRestoranlarhaqidaSerializerRU(serializers.ModelSerializer):
     image_file=BizningRestoranlarniRasmlariSerializer(many=True)
     class Meta:
         model = BizningRestoranlarhaqida
-        fields = ('title_ru','image_file','date')
+        fields = ('id','title_ru','image_file','date')
 
 class BizningRestoranlarhaqidaSerializerENG(serializers.ModelSerializer):
     image_file=BizningRestoranlarniRasmlariSerializer(many=True)
     class Meta:
         model = BizningRestoranlarhaqida
-        fields = ('title_eng','image_file','date')
+        fields = ('id','title_eng','image_file','date')
 
 
 class BizningSavdoMarkazlarniRasmlariSerializer(serializers.ModelSerializer):
@@ -155,7 +155,7 @@ class BizningSavdoMarkazlarhaqidaSerializerUZB(serializers.ModelSerializer):
     image_file = BizningSavdoMarkazlarniRasmlariSerializer(many=True)
     class Meta:
         model = BizningSavdoMarkazlarhaqida
-        fields = ('title_uzb','image_file','date')
+        fields = ('id','title_uzb','image_file','date')
 
 
 class BizningSavdoMarkazlarhaqidaSerializerRU(serializers.ModelSerializer):
@@ -163,14 +163,14 @@ class BizningSavdoMarkazlarhaqidaSerializerRU(serializers.ModelSerializer):
 
     class Meta:
         model = BizningSavdoMarkazlarhaqida
-        fields = ('title_ru','image_file','date')
+        fields = ('id','title_ru','image_file','date')
 
 class BizningSavdoMarkazlarhaqidaSerializerENG(serializers.ModelSerializer):
     image_file = BizningSavdoMarkazlarniRasmlariSerializer(many=True)
 
     class Meta:
         model = BizningSavdoMarkazlarhaqida
-        fields = ('title_eng','image_file','date')
+        fields = ('id','title_eng','image_file','date')
 
 
 class KorgazmalarRasmlariSerializer(serializers.ModelSerializer):
@@ -183,21 +183,21 @@ class TurizmTurlariSerializerUZB(serializers.ModelSerializer):
 
     class Meta:
         model = TurizmTurlari
-        fields = ('name_uzb','title_uzb','image_file','date')
+        fields = ('id','name_uzb','title_uzb','image_file','date')
 
 
 class TurizmTurlariSerializerRU(serializers.ModelSerializer):
 
     class Meta:
         model = TurizmTurlari
-        fields = ('name_ru','title_ru','image_file','date')
+        fields = ('id','name_ru','title_ru','image_file','date')
 
 
 class TurizmTurlariSerializerENG(serializers.ModelSerializer):
 
     class Meta:
         model = TurizmTurlari
-        fields = ('name_eng','title_eng','image_file','date')
+        fields = ('id','name_eng','title_eng','image_file','date')
 
 
 class LogistikaTurlarimizSerializerUZB(serializers.ModelSerializer):
@@ -211,14 +211,14 @@ class LogistikaTurlarimizSerializerRU(serializers.ModelSerializer):
 
     class Meta:
         model = LogistikaTurlarimiz
-        fields = ('name_ru','title_ru','image_file','date')
+        fields = ('id','name_ru','title_ru','image_file','date')
 
 
 class LogistikaTurlarimizSerializerENG(serializers.ModelSerializer):
 
     class Meta:
         model = LogistikaTurlarimiz
-        fields = ('name_eng','title_eng','image_file','date')
+        fields = ('id','name_eng','title_eng','image_file','date')
 
 
 class BizningLogistikaRasmlariSerializer(serializers.ModelSerializer):
@@ -238,42 +238,42 @@ class YangiliklarModelSerializerUZB(serializers.ModelSerializer):
 
     class Meta:
         model = YangiliklarModel
-        fields = ('name_uzb','title_uzb','image_file','date')
+        fields = ('id','name_uzb','title_uzb','image_file','date')
 
 
 class YangiliklarModelSerializerRU(serializers.ModelSerializer):
 
     class Meta:
         model = YangiliklarModel
-        fields = ('name_ru','title_ru','image_file','date')
+        fields = ('id','name_ru','title_ru','image_file','date')
 
 
 class YangiliklarModelSerializerENG(serializers.ModelSerializer):
 
     class Meta:
         model = YangiliklarModel
-        fields = ('name_eng','title_eng','image_file','date')
+        fields = ('id','name_eng','title_eng','image_file','date')
 
 
 class EtnikTurizmModelSerializerUZB(serializers.ModelSerializer):
 
     class Meta:
         model = EtnikTurizmModel
-        fields = ('name_uzb','title_uzb','image_file','date')
+        fields = ('id','name_uzb','title_uzb','image_file','date')
 
 
 class EtnikTurizmModelSerializerRU(serializers.ModelSerializer):
 
     class Meta:
         model = EtnikTurizmModel
-        fields = ('name_ru','title_ru','image_file','date')
+        fields = ('id','name_ru','title_ru','image_file','date')
 
 
 class EtnikTurizmModelSerializerENG(serializers.ModelSerializer):
 
     class Meta:
         model = EtnikTurizmModel
-        fields = ('name_eng','title_eng','image_file','date')
+        fields = ('id','name_eng','title_eng','image_file','date')
 
 
 
@@ -281,18 +281,18 @@ class ExtremalTurizmModelSerializerUZB(serializers.ModelSerializer):
 
     class Meta:
         model = ExtremalTurizmModel
-        fields = ('name_uzb','title_uzb','image_file','date')
+        fields = ('id','name_uzb','title_uzb','image_file','date')
 
 
 class ExtremalTurizmModelSerializerRU(serializers.ModelSerializer):
 
     class Meta:
         model = ExtremalTurizmModel
-        fields = ('name_ru','title_ru','image_file','date')
+        fields = ('id','name_ru','title_ru','image_file','date')
 
 
 class ExtremalTurizmModelSerializerENG(serializers.ModelSerializer):
 
     class Meta:
         model = ExtremalTurizmModel
-        fields = ('name_eng','title_eng','image_file','date')
+        fields = ('id','name_eng','title_eng','image_file','date')
