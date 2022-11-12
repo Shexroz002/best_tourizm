@@ -5,7 +5,7 @@ from .models import TarixiyTurizmRasmlari,BizningGalereyamiz,BoglanishModel,\
                     BizningRestoranlarhaqida,BizningSavdoMarkazlarniRasmlari,KorgazmalarRasmlari,\
                     TurizmTurlari,LogistikaTurlarimiz,BizningLogistikaRasmlari,Xodimlar,\
                     BizningSavdoMarkazlarhaqida,SafarTurizmRasmlari,YangiliklarModel,\
-                    EtnikTurizmModel,ExtremalTurizmModel
+                    EtnikTurizmModel,ExtremalTurizmModel,SafarTurizmModel
 from .serializers import TarixiyTurizmRasmlariSerializerUZB,TarixiyTurizmRasmlariSerializerRU,TarixiyTurizmRasmlariSerializerENG,\
                         BizningGalereyamizSerializer,BoglanishModelSerializer,\
                         BizBoglanishUchunModelSerializerUZB,BizBoglanishUchunModelSerializerRU,BizBoglanishUchunModelSerializerENG,\
@@ -17,8 +17,8 @@ from .serializers import TarixiyTurizmRasmlariSerializerUZB,TarixiyTurizmRasmlar
                         KorgazmalarRasmlariSerializer,\
                         TurizmTurlariSerializerUZB,TurizmTurlariSerializerRU,TurizmTurlariSerializerENG,\
                         LogistikaTurlarimizSerializerUZB,LogistikaTurlarimizSerializerENG,LogistikaTurlarimizSerializerRU,\
-                        BizningLogistikaRasmlariSerializer, XodimlarSerializer,SafarTurizmRasmlariSerializerUZB,\
-                        SafarTurizmRasmlariSerializerRU,SafarTurizmRasmlariSerializerENG,YangiliklarModelSerializerENG,\
+                        BizningLogistikaRasmlariSerializer, XodimlarSerializer,SafarTurizmModelSerializerUZB,\
+                        SafarTurizmModelSerializerRU,SafarTurizmModelSerializerENG,YangiliklarModelSerializerENG,\
                         YangiliklarModelSerializerRU,YangiliklarModelSerializerUZB,EtnikTurizmModelSerializerENG,\
                         EtnikTurizmModelSerializerRU,EtnikTurizmModelSerializerUZB,ExtremalTurizmModelSerializerENG,\
                         ExtremalTurizmModelSerializerRU,ExtremalTurizmModelSerializerUZB           
@@ -38,17 +38,17 @@ class TarixiyTurizmRasmlariAPIViews(views.APIView):
             return response.Response(TarixiyTurizmRasmlariSerializerENG(tarixy_turizm,many=True).data,status=status.HTTP_200_OK)
         return response.Response(TarixiyTurizmRasmlariSerializerUZB(tarixy_turizm,many=True).data,status=status.HTTP_200_OK)
 
-class SafarTurizmRasmlariAPIViews(views.APIView):
+class SafarTurizmModelAPIViews(views.APIView):
     def get(self,request):
         language  = request.GET.get('language', None)
-        safar_turizm = SafarTurizmRasmlari.objects.all()
+        safar_turizm = SafarTurizmModel.objects.all()
         if language == 'uzb':
-            return response.Response(SafarTurizmRasmlariSerializerUZB(safar_turizm,many=True).data,status=status.HTTP_200_OK)
+            return response.Response(SafarTurizmModelSerializerUZB(safar_turizm,many=True).data,status=status.HTTP_200_OK)
         if language == 'rus':
-            return response.Response(SafarTurizmRasmlariSerializerRU(safar_turizm,many=True).data,status=status.HTTP_200_OK)
+            return response.Response(SafarTurizmModelSerializerRU(safar_turizm,many=True).data,status=status.HTTP_200_OK)
         if language == 'eng':
-            return response.Response(SafarTurizmRasmlariSerializerENG(safar_turizm,many=True).data,status=status.HTTP_200_OK)
-        return response.Response(SafarTurizmRasmlariSerializerUZB(safar_turizm,many=True).data,status=status.HTTP_200_OK)
+            return response.Response(SafarTurizmModelSerializerENG(safar_turizm,many=True).data,status=status.HTTP_200_OK)
+        return response.Response(SafarTurizmModelSerializerUZB(safar_turizm,many=True).data,status=status.HTTP_200_OK)
 
 
 

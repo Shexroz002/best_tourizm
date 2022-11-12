@@ -14,17 +14,7 @@ class TarixiyTurizmRasmlari(models.Model):
     def __str__(self):
         return self.name_uzb
 
-class SafarTurizmRasmlari(models.Model):
-    name_uzb = models.CharField(max_length = 90,default='',verbose_name = "O'zbekcha nomi")
-    name_ru = models.CharField(max_length = 90 ,default='',verbose_name = "Ruscha nomi")
-    name_eng = models.CharField(max_length = 90,default='',verbose_name = "Inglizcha nomi")
-    title_uzb = models.CharField(max_length = 90,default='',verbose_name = "O'zbekcha haqida malimot")
-    title_ru = models.CharField(max_length = 90 ,default='',verbose_name = "Ruscha haqida malimot")
-    title_eng = models.CharField(max_length = 90,default='',verbose_name = "Inglizcha haqida malimot")
-    image_file  = models.ImageField(upload_to = 'tarixiy_turizm_rasmlari/',null=False,blank = False,verbose_name = "Rasm faylni kirting")
-    date = models.DateTimeField(auto_now_add=True)
-    def __str__(self):
-        return self.name_uzb
+
 
 
 class BizningGalereyamiz(models.Model):
@@ -214,6 +204,26 @@ class EtnikTurizmModel(models.Model):
     title_ru = models.TextField(max_length = 2500 ,default='',verbose_name = "Etnik turizm haqida malimot kirting(Rus)")
     title_eng = models.TextField(max_length = 2500,default='',verbose_name = "Etnik turizm haqida malimot kirting(Eng)")
     image_file  = models.ManyToManyField(EtnikTurizmRasmlari,related_name='Etnik',verbose_name = "Etnik turizm rasmni kirting")
+    date = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.name_uzb
+
+class SafarTurizmRasmlari(models.Model):
+    name = models.CharField(max_length = 90 ,default='images',verbose_name = "Rasm nomi")
+    image_file  = models.ImageField(upload_to = 'etnik_turizm_rasmlari/',null=False,blank = False,verbose_name = "Rasm filesni")
+
+    def __str__(self):
+        return self.name
+
+
+class SafarTurizmModel(models.Model):
+    name_uzb = models.CharField(max_length = 90,default='',verbose_name = "Etnik turizm O'zbekcha nomi")
+    name_ru = models.CharField(max_length = 90 ,default='',verbose_name = "Etnik turizm Ruscha nomi")
+    name_eng = models.CharField(max_length = 90,default='',verbose_name = "Etnik turizm Inglizcha nomi")
+    title_uzb = models.TextField(max_length = 2500,default='',verbose_name = "Etnik turizm haqida malimot kirting(Uzb)")
+    title_ru = models.TextField(max_length = 2500 ,default='',verbose_name = "Etnik turizm haqida malimot kirting(Rus)")
+    title_eng = models.TextField(max_length = 2500,default='',verbose_name = "Etnik turizm haqida malimot kirting(Eng)")
+    image_file  = models.ManyToManyField(SafarTurizmRasmlari,related_name='Etnik',verbose_name = "Etnik turizm rasmni kirting")
     date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.name_uzb

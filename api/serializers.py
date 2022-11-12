@@ -3,9 +3,9 @@ from .models import TarixiyTurizmRasmlari,BizningGalereyamiz,BoglanishModel,\
                     BizBoglanishUchunModel,BizningMuzeylar,BizningRestoranlarniRasmlari,\
                     BizningRestoranlarhaqida,BizningSavdoMarkazlarniRasmlari,KorgazmalarRasmlari,\
                     TurizmTurlari,LogistikaTurlarimiz,BizningLogistikaRasmlari,Xodimlar,\
-                    BizningSavdoMarkazlarhaqida,SafarTurizmRasmlari,YangiliklarModel,\
+                    BizningSavdoMarkazlarhaqida,SafarTurizmModel,YangiliklarModel,\
                     ExtremalTurizmModel,EtnikTurizmModel,EtnikTurizmRasmlari,YangiliklarRasmlari,\
-                    ExtremalTurizmRasmlari
+                    ExtremalTurizmRasmlari,SafarTurizmRasmlari
     
 
 
@@ -29,20 +29,26 @@ class TarixiyTurizmRasmlariSerializerENG(serializers.ModelSerializer):
         model = TarixiyTurizmRasmlari
         fields = ('id','name_eng','image_file','date')
 
-class SafarTurizmRasmlariSerializerUZB(serializers.ModelSerializer):
+class SafarTurizmRasmlariSerializer(serializers.ModelSerializer):
 
+    class Meta:
+        model = SafarTurizmRasmlari
+        fields = "__all__"
+
+class SafarTurizmModelSerializerUZB(serializers.ModelSerializer):
+    image_file = SafarTurizmRasmlariSerializer(many=True)
     class Meta:
         model = TarixiyTurizmRasmlari
         fields = ('id','name_uzb','title_uzb','image_file','date')
 
-class SafarTurizmRasmlariSerializerRU(serializers.ModelSerializer):
-
+class SafarTurizmModelSerializerRU(serializers.ModelSerializer):
+    image_file = SafarTurizmRasmlariSerializer(many=True)
     class Meta:
         model = TarixiyTurizmRasmlari
         fields = ('name_ru','title_ru','image_file','date')
 
-class SafarTurizmRasmlariSerializerENG(serializers.ModelSerializer):
-
+class SafarTurizmModelSerializerENG(serializers.ModelSerializer):
+    image_file = SafarTurizmRasmlariSerializer(many=True)
     class Meta:
         model = TarixiyTurizmRasmlari
         fields = ('id','name_eng','title_eng','image_file','date')
