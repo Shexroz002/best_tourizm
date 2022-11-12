@@ -4,7 +4,8 @@ from .models import TarixiyTurizmRasmlari,BizningGalereyamiz,BoglanishModel,\
                     BizningRestoranlarhaqida,BizningSavdoMarkazlarniRasmlari,KorgazmalarRasmlari,\
                     TurizmTurlari,LogistikaTurlarimiz,BizningLogistikaRasmlari,Xodimlar,\
                     BizningSavdoMarkazlarhaqida,SafarTurizmRasmlari,YangiliklarModel,\
-                    ExtremalTurizmModel,EtnikTurizmModel
+                    ExtremalTurizmModel,EtnikTurizmModel,EtnikTurizmRasmlari,YangiliklarRasmlari,\
+                    ExtremalTurizmRasmlari
     
 
 
@@ -233,66 +234,80 @@ class XodimlarSerializer(serializers.ModelSerializer):
         model = Xodimlar
         fields = "__all__"
 
+class YangiliklarRasmlariSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = YangiliklarRasmlari
+        fields = "__all__"
 
 class YangiliklarModelSerializerUZB(serializers.ModelSerializer):
-
+    image_file = YangiliklarRasmlariSerializer(many=True)
     class Meta:
         model = YangiliklarModel
         fields = ('id','name_uzb','title_uzb','image_file','date')
 
 
 class YangiliklarModelSerializerRU(serializers.ModelSerializer):
-
+    image_file = YangiliklarRasmlariSerializer(many=True)
     class Meta:
         model = YangiliklarModel
         fields = ('id','name_ru','title_ru','image_file','date')
 
 
 class YangiliklarModelSerializerENG(serializers.ModelSerializer):
-
+    image_file = YangiliklarRasmlariSerializer(many=True)
     class Meta:
         model = YangiliklarModel
         fields = ('id','name_eng','title_eng','image_file','date')
 
+class EtnikTurizmRasmlariSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = EtnikTurizmRasmlari
+        fields = "__all__"
 
 class EtnikTurizmModelSerializerUZB(serializers.ModelSerializer):
-
+    image_file =EtnikTurizmRasmlariSerializer(many=True)
     class Meta:
         model = EtnikTurizmModel
         fields = ('id','name_uzb','title_uzb','image_file','date')
 
 
 class EtnikTurizmModelSerializerRU(serializers.ModelSerializer):
-
+    image_file =EtnikTurizmRasmlariSerializer(many=True)
     class Meta:
         model = EtnikTurizmModel
         fields = ('id','name_ru','title_ru','image_file','date')
 
 
 class EtnikTurizmModelSerializerENG(serializers.ModelSerializer):
-
+    image_file =EtnikTurizmRasmlariSerializer(many=True)
     class Meta:
         model = EtnikTurizmModel
         fields = ('id','name_eng','title_eng','image_file','date')
 
+class ExtremalTurizmRasmlariSerializer(serializers.ModelSerializer):
 
+    class Meta:
+        model = ExtremalTurizmRasmlari
+        fields = "__all__"
 
 class ExtremalTurizmModelSerializerUZB(serializers.ModelSerializer):
-
+    image_file = ExtremalTurizmRasmlariSerializer(many=True)
     class Meta:
         model = ExtremalTurizmModel
         fields = ('id','name_uzb','title_uzb','image_file','date')
 
 
 class ExtremalTurizmModelSerializerRU(serializers.ModelSerializer):
-
+    image_file = ExtremalTurizmRasmlariSerializer(many=True)
     class Meta:
         model = ExtremalTurizmModel
         fields = ('id','name_ru','title_ru','image_file','date')
 
 
 class ExtremalTurizmModelSerializerENG(serializers.ModelSerializer):
-
+    image_file = ExtremalTurizmRasmlariSerializer(many=True)
     class Meta:
         model = ExtremalTurizmModel
         fields = ('id','name_eng','title_eng','image_file','date')
