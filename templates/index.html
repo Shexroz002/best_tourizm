@@ -1,0 +1,386 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/iconsNew2.png' %}" type="image/x-icon">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Navoiy milliy turistik markazi">
+    <meta name="description"
+          content="Navoiy milliy turistik markazi">
+
+    <title>Navoiy milliy turistik markazi</title>
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css"> -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+</head>
+<body>
+
+<!-- <div class="preloader">
+  <div class="preloader-body">
+    <div class="cssload-container">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
+    <p>Loading...</p>
+  </div>
+</div> -->
+<div class="">
+    <div class="head text-center text-white">
+        <h4 data-aos="fade-down" data-aos-duration="800" class="lng-head_title">Navoiy viloyati Turizm va madaniy meros
+            bosh boshqarmasi</h4>
+    </div>
+    <header>
+        <nav class="header-ul">
+           <div class="logo" data-aos="fade-right" data-aos-duration="800">
+              <a href=""><img src="{% static 'images/iconNew.svg' %}" alt=""></a>
+           </div>
+           <ul data-aos="fade-left" data-aos-duration="800">
+              <div> <i class="uil uil-times nav-close-btn"></i></div>
+              <li><a href="/" class="lng-navlink_0">Bosh sahifa</a></li>
+              <li><a href="/tur/paketlari/" class="lng-navlink_1">Tur paketlar</a></li>
+              <li><a href="/services/" style="color: #fff;" class="active lng-navlink_2">Xizmatlar</a></li>
+              <li><a href="#" class="lng-navlink_3">Turar joylar</a></li>
+              <li><a href="/typeturizm/" class="lng-navlink_4">Turizm turlari</a></li>
+              <li><a href="/logistika/" class="lng-navlink_5">Logistika</a></li>
+              <li><a href="/law/" class="lng-navlink_6">Turizm qonunlari</a></li>
+              <li><select class="form-select form-select-md">
+               <option value="uzb">UZB</option>
+               <option value="rus">RUS</option>
+               <option value="eng">ENG</option>
+            </select></li>
+           </ul>
+           <i class="uil uil-apps nav-menu-btn"></i>
+        </nav>
+     </header>
+</div>
+
+<section class="home">
+    <div class="media-icons" data-aos="fade-right" data-aos-duration="800">
+        <a target="_blank" href="https://www.facebook.com/tourisminnavoi/"><i class="uil uil-facebook-f"></i></a>
+        <a target="_blank" href="https://www.instagram.com/navoitourism/"><i class="uil uil-instagram"></i></a>
+        <a target="_blank" href="https://t.me/navoitourism"><i class="uil uil-telegram-alt"></i></a>
+    </div>
+    <div
+            class="swiper bg-slider"
+    >
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="{% static 'images/page-bg-images/bg-card-new.png' %}"/>
+                <div class="text-content">
+                    <h2 class="title lng-city1">Navoiy <span class="city_span1">shahri</span></h2>
+                    <p class="lng-about_city_1">Navoiy Oʻzbekistonning Navoiy viloyatidagi shahardir. Bu shahar Navoiy
+                        viloyatning maʼmuriy, iqtisodiy va madaniy markazidir. Oʻzbekistonning janubi-gʻarbida,
+                        Zarafshon daryosi vodiysida, viloyatning sharqiy chekkasida, 347 m balandlikda joylashgan.</p>
+                    <a href="https://uz.wikipedia.org/wiki/Navoiy_(shahar)" class="read-more lng-more_link1"
+                       data-aos="fade-left" data-aos-duration="800" target="_blank">Ko'proq Ma'lumot <i
+                            class="uil uil-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="swiper-slide dark-layer">
+                <img src="{% static 'images/page-bg-images/card3.jpg' %}"/>
+                <div class="text-content">
+                    <h2 class="title lng-city2">Navoiy <span class="city_span2">shahri</span></h2>
+                    <p class="lng-about_city_2">Navoiy shahri Alisher Navoiy sharafiga atab shunday nomlangan.
+                        Shaharning hozirgi hududi oldin choʻl boʻlgan. Shimolda qadimiy Karmana shahri joylashgan
+                        boʻlib, oʻtmishda Buxoro amirligining bekligi hisoblangan. Janubda Temir yoʻl stansiyasi va bir
+                        qishloq boʻlgan, hozirda bu joy Navoiy shahrining Vokzaloldi hududi deb ataladi.</p>
+                    <a href="https://uz.wikipedia.org/wiki/Navoiy_(shahar)" class="read-more lng-more_link2"
+                       data-aos="fade-left" data-aos-duration="800" target="_blank">Ko'proq Ma'lumot <i
+                            class="uil uil-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="swiper-slide dark-layer">
+                <img src="{% static 'images/page-bg-images/card4.jpg' %}"/>
+                <div class="text-content">
+                    <h2 class="title lng-city3">Navoiy <span class="city_span3">shahri</span></h2>
+                    <p class="lng-about_city_3">Zarafshon daryosining yaqinligi, yirik qishloq xoʻjaligi hududning
+                        markazida joylashganligi, transport bilan yaxshi taʼminlanganligi shaharning tez oʻsish omili
+                        boʻldi. Navoiy Oʻrta Osiyoda yirik elektr energiya va kimyo sanoati markazi hisoblanadi.
+                        Navoiyda 21 ta yirik sanoat korxonasi mavjud. </p>
+                    <a href="https://uz.wikipedia.org/wiki/Navoiy_(shahar)" class="read-more lng-more_link3"
+                       data-aos="fade-left" data-aos-duration="800">Ko'proq Ma'lumot <i class="uil uil-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static 'images/page-bg-images/bg-card-new2.jpg' %}" class="swiper-slide" alt="">
+                <div class="text-content">
+                    <h2 class="title lng-city4">Navoiy <span class="city_span4">shahri</span></h2>
+                    <p class="lng-about_city_4">Navoiy yirik ilm-maʼnaviyat va maʼrifat markazlaridan. Bu yerda 2 oliy
+                        oʻquv yurti, 3 ta akademik litsey, 18 ta umumiy taʼlim maktabi, 1 ta muzey, madaniyat va
+                        istirohat bogʻlari, kutubxonalar, 3 stadion, 3 suzish havzasi, kasalxonalar, poliklinikalar,
+                        shoshilinch tibbiy yordam koʻrsatish markazi, tibbiy dispanserlar faoliyat koʻrsatadi.</p>
+                    <a href="https://uz.wikipedia.org/wiki/Navoiy_(shahar)" class="read-more lng-more_link4"
+                       data-aos="fade-left" data-aos-duration="800">Ko'proq Ma'lumot <i class="uil uil-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div thumbsSlider="" class="bg-slider-thumbs">
+        <div class="swiper-wrapper thumbs-container">
+            <img src="{% static 'images/page-bg-images/bg-card-new.png' %}" class="swiper-slide" alt="">
+            <img src="{% static 'images/page-bg-images/card3.jpg' %}" class="swiper-slide" alt="">
+            <img src="{% static 'images/page-bg-images/card4.jpg' %}" class="swiper-slide" alt="">
+            <img src="{% static 'images/page-bg-images/bg-card-new2.jpg' %}" class="swiper-slide" alt="">
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Effect overflow -->
+
+<section class="tranding" data-aos="zoom-in" data-aos-duration="800">
+    <div class="section-text lng-historical" data-aos="fade-down">Historical Places</div>
+    <div class="swiper Effect-overflow">
+        <div class="swiper-wrapper" id="tarixiy_joylar">
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<!-- Effect overflow -->
+
+
+<section class="advertising">
+    <a href="https://youtu.be/i7S801L1f_s" target="_blank" data-aos="fade-down" data-aos-duration="800"><i
+            class="uil uil-play"></i></a>
+</section> 
+
+
+ <div class="ourService pb-5">
+    <div class="section-text lng-services" data-aos="fade-down" data-aos-duration="800">Our Services</div>
+    <div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12" data-aos="fade-right" data-aos-duration="800">
+                <div class="service-box mb-4">
+                    <div class="icon">
+                        <i class="uil uil-sliders-v-alt"></i>
+                    </div>
+                    <div>
+                        <h4 class="lng-service_type_1">Turistlarga Xizmat Ko'rsatish</h4>
+                        <p class="lng-service_type_text1">Navoiyda turistlarga doimiy xizmat ko'rsatiladi, ular
+                            Navoiyning tarixiy joylarida mehmon qilinadi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12" data-aos="fade-down" data-aos-duration="800">
+                <div class="service-box mb-4">
+                    <div class="icon">
+                        <i class="uil uil-award"></i>
+                    </div>
+                    <div>
+                        <h4 class="lng-service_type_2">Wide Variety of Tours</h4>
+                        <p class="lng-service_type_text2">We offer a wide variety of personally picked tours with
+                            destinations all over the globe.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12" data-aos="fade-left" data-aos-duration="800">
+                <div class="service-box mb-4">
+                    <div class="icon">
+                        <i class="uil uil-star"></i>
+                    </div>
+                    <div>
+                        <h4 class="lng-service_type_3">Servis Soxasida Malaka Oshirish</h4>
+                        <p class="lng-service_type_text3">Our tour managers are qualified, skilled, and friendly to
+                            bring you the best service.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12" data-aos="fade-right" data-aos-duration="800">
+                <div class="service-box mb-4">
+                    <div class="icon">
+                        <i class="uil uil-headphones-alt"></i>
+                    </div>
+                    <div>
+                        <h4 class="lng-service_type_4">24/7 Support</h4>
+                        <p class="lng-service_type_text4">You can always get professional support from our staff 24/7
+                            and ask any question you have.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12" data-aos="fade-down" data-aos-duration="800">
+                <div class="service-box mb-4">
+                    <div class="icon">
+                        <i class="uil uil-fire"></i>
+                    </div>
+                    <div>
+                        <h4 class="lng-service_type_5">Handpicked Hotels</h4>
+                        <p class="lng-service_type_text5">Our team offers only the best selection of affordable and
+                            luxury hotels to our clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="img-wrap-section">
+    <div class="section-text lng-gallery" data-aos="fade-down" data-aos-duration="800">Our Galery</div>
+    <div class="swiper card_slider">
+        <div class="swiper-wrapper" id="bizning_foto" data-aos="fade-right" data-aos-duration="800">
+        </div>
+        <div class="swiper-button-next img-section-next"></div>
+        <div class="swiper-button-prev img-section-next"></div>
+        <div class="swiper-pagination img-section-pagination"></div>
+    </div>
+</section>
+
+ <section class="contact">
+    <div class="section-text lng-contact" data-aos="fade-down" data-aos-duration="800">Contact US</div>
+    <div class="contact-container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-5 col-md-5 col-sm-6 col-12 form-box-first" data-aos="fade-right"
+                 data-aos-duration="800">
+                <h4 class="lng-touch">Get in touch</h4>
+                <form id="form" method="post">
+                    <input type="text" required id="input-name" placeholder="Name...">
+                    <input type="text" required id="input-phone" placeholder="Phone...">
+                    <input type="email" required id="input-email" placeholder="Email...">
+                    <textarea rows="6" required id="story" name="story">
+                    Message
+                 </textarea>
+                    <input type="submit" value="Send Message" class="btn btn-info text-white">
+                </form>
+            </div>
+            <div class="col-xl-4 col-lg-5 col-md-5 col-sm-6 col-12 form-box-second" data-aos="fade-left"
+                 data-aos-duration="800">
+                <h4 class="lng-contact2">Contact us</h4>
+                <ul id="contact_ul">
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="foot-top">
+        <div class="foot-container">
+            <div class="row foot-row">
+                <div class="col-xl-3 col-lg-4 col-md-4 col-12 box_1 pb-3" data-aos="fade-right" data-aos-duration="800">
+                    <h5 class="lng-contact1">CONTACT US</h5>
+                    <ul>
+                        <li>
+                            <i class="uil uil-phone-alt"></i>
+                            <a href="#">+998 99 753 17 57</a>
+                        </li>
+                        <li>
+                            <i class="uil uil-envelope-alt"></i>
+                            <a href="#">jasurbektoshev@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="uil uil-location-arrow"></i>
+                            <a href="#" class="lng-address1">Navoiy viloyati karmana tumani ddddd 84</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-12 box_2 pb-3" data-aos="fade-up" data-aos-duration="800">
+                    <h5 class="lng-news">POPULAR NEWS</h5>
+                    <ul>
+                        <li>
+                            <a href="#" class="lng-news1">Your Personal Guide to 5 Best Places to Visit on Earth</a>
+                            <span class="lng-date">September 25, 2022</span>
+                        </li>
+                        <li>
+                            <a href="#" class="lng-news2">Top 10 Hotels: Rating by Wonder Tour Travel Experts</a>
+                            <span class="lng-date1">September 25, 2022</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-12 box_3 pb-3" data-aos="fade-right" data-aos-duration="800">
+                    <h5 class="lng-quik">QUICK LINKS</h5>
+                    <div class="box_3-div">
+                        <ul>
+                            <li>
+                                <span></span>
+                                <a href="#" class="lng-foot_about">About us</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="#" class="lng-foot_tours">Our Tours</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="#" class="lng-foot_team">Our Team</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <span></span>
+                                <a href="#" class="lng-foot_services">Our Services</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="#" class="lng-foot_hotel">Our Hotels</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div><a href="#" class="sendingFoot lng-touch1">Get in touch</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot-bottom">
+        <p>© 2022 Wonder Tour. All Rights Reserved. Design by <br> Jasurbek Toshev</p>
+        <ul>
+            <li>
+                <a href="#"><i class="uil uil-facebook-f"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="uil uil-twitter"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="uil uil-google"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="uil uil-instagram"></i></a>
+            </li>
+        </ul>
+        <a href="#">Privacy Policy</a>
+    </div>
+</footer>
+
+<div class="footer-modals" id="historical_all_modal">
+   
+</div>
+
+<!-- Javascript-->
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+<!-- <script src="{% static 'js/getInformation.js"></script> -->
+<script src="{% static 'js/backend/indexInformation.js' %}"></script>
+
+<script src="{% static 'js/lang.js' %}"></script>
+
+<script src="{% static 'js/language_function.js' %}"></script>
+
+</body>
+</html>
