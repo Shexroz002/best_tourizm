@@ -13,21 +13,21 @@ class TarixiyTurizmRasmlariSerializerUZB(serializers.ModelSerializer):
 
     class Meta:
         model = TarixiyTurizmRasmlari
-        fields = ('id','name_uzb','image_file','date')
+        fields = ('id','name_uzb','image_file','title_uzb','date')
 
 
 class TarixiyTurizmRasmlariSerializerRU(serializers.ModelSerializer):
 
     class Meta:
         model = TarixiyTurizmRasmlari
-        fields = ('id','name_ru','image_file','date')
+        fields = ('id','name_ru','image_file','title_ru','date')
 
 
 class TarixiyTurizmRasmlariSerializerENG(serializers.ModelSerializer):
 
     class Meta:
         model = TarixiyTurizmRasmlari
-        fields = ('id','name_eng','image_file','date')
+        fields = ('id','name_eng','image_file','title_eng','date')
 
 class SafarTurizmRasmlariSerializer(serializers.ModelSerializer):
 

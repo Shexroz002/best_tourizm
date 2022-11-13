@@ -4,7 +4,7 @@ from .views import TarixiyTurizmRasmlariAPIViews,BizningGalereyamizAPIViews,Bogl
                    BizningRestoranlarhaqidaAPIViews,BizningSavdoMarkazlarniRasmlariAPIViews,BizningSavdoMarkazlarhaqidaAPIViews,\
                    KorgazmalarRasmlariAPIViews,TurizmTurlariAPIViews,LogistikaTurlarimizAPIViews,\
                    BizningLogistikaRasmlariAPIViews,SafarTurizmModelAPIViews,YangiliklarModelAPIViews,\
-                   YangiliklarDetailModelAPIViews
+                   YangiliklarDetailModelAPIViews,EtnikTurizmModelAPIViews,ExtremalTurizmModelAPIViews
 
 urlpatterns = [
     path('tarixiy/turizm/rasmlar',TarixiyTurizmRasmlariAPIViews.as_view()),
@@ -23,4 +23,6 @@ urlpatterns = [
     path('logistika/rasmlari',BizningLogistikaRasmlariAPIViews.as_view()),
     path('yangiliklar',YangiliklarModelAPIViews.as_view()),
     path('yangiliklar/<int:id>',YangiliklarDetailModelAPIViews.as_view()),
+    path('etnik/turizm',EtnikTurizmModelAPIViews.as_view()),
+    path('extremal/turizm',ExtremalTurizmModelAPIViews.as_view()),
 ]
