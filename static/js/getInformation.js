@@ -1,4 +1,4 @@
-fetch( 'https://navoiytourizm.pythonanywhere.com/mehmonxonda/open/and/close' )
+fetch( 'http://navoiytravel.uz/mehmonxonda/open/and/close' )
     .then( response => response.json() )
     .then (response => {
         let timeBox = document.querySelector("#time_id");
@@ -27,7 +27,7 @@ fetch( 'https://navoiytourizm.pythonanywhere.com/mehmonxonda/open/and/close' )
 });
 
 
-fetch( 'https://navoiytourizm.pythonanywhere.com/mehmonxonda/rooms' )
+fetch( 'http://navoiytravel.uz/mehmonxonda/rooms' )
     .then( response => response.json() )
     .then( response => {
         let ourCardBlack = document.querySelector("#ourRooms_card");
@@ -65,7 +65,7 @@ fetch( 'https://navoiytourizm.pythonanywhere.com/mehmonxonda/rooms' )
 });
 
 
-fetch( 'https://navoiytourizm.pythonanywhere.com/mehmonxonda/meals' )
+fetch( 'http://navoiytravel.uz/mehmonxonda/meals' )
     .then( response => response.json() )
     .then( response => { 
         let hotdogSection = document.querySelector("#hotdog_row");
@@ -117,7 +117,7 @@ fetch( 'https://navoiytourizm.pythonanywhere.com/mehmonxonda/meals' )
 });
 
 
-fetch( 'https://navoiytourizm.pythonanywhere.com/mehmonxonda/meals' )
+fetch( 'http://navoiytravel.uz/mehmonxonda/meals' )
     .then( response => response.json() )
     .then( response => { 
         let hotdogSection = document.querySelector("#disert_row");
@@ -179,7 +179,7 @@ form.addEventListener('submit', function(e){
     let email = document.querySelector('#email').value;
     let textArea = document.querySelector('#textarea').value;
     if(textArea.trim()){
-      fetch(`https://navoiytourizm.pythonanywhere.com/mehmonxonda/customermassage/`, {
+      fetch(`http://navoiytravel.uz/mehmonxonda/customermassage/`, {
         method: 'POST',
         body: JSON.stringify({
             name: name,
