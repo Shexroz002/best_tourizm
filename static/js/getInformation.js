@@ -27,7 +27,7 @@ fetch( 'http://navoiytravel.uz/mehmonxonda/open/and/close' )
 });
 
 
-fetch( 'http://navoiytravel.uz/mehmonxonda/rooms' )
+fetch( 'http://navoiytravel.uz/mehmonxonda/rooms/' )
     .then( response => response.json() )
     .then( response => {
         let ourCardBlack = document.querySelector("#ourRooms_card");
@@ -65,7 +65,7 @@ fetch( 'http://navoiytravel.uz/mehmonxonda/rooms' )
 });
 
 
-fetch( 'http://navoiytravel.uz/mehmonxonda/meals' )
+fetch( 'http://navoiytravel.uz/mehmonxonda/meals/' )
     .then( response => response.json() )
     .then( response => { 
         let hotdogSection = document.querySelector("#hotdog_row");
@@ -117,7 +117,7 @@ fetch( 'http://navoiytravel.uz/mehmonxonda/meals' )
 });
 
 
-fetch( 'http://navoiytravel.uz/mehmonxonda/meals' )
+fetch( 'http://navoiytravel.uz/mehmonxonda/meals/' )
     .then( response => response.json() )
     .then( response => { 
         let hotdogSection = document.querySelector("#disert_row");
