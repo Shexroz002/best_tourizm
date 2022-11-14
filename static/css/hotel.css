@@ -229,37 +229,37 @@ html {
 }
 
 .slider-1 {
-    background: url('./Images/Background/bg-new-1.jpg');
+    background: url('/staticfiles/images/Background/bg-new-1.jpg');
     background-position: 100% 100% !important;
 }
 
 .slider-2 {
-    background: url('./Images/Background/bg-new2.jpg');
+    background: url('/staticfiles/images/Background/bg-new2.jpg');
     background-position: 100% 100% !important;
 }
 
 .slider-3 {
-    background: url('./Images/Background/bg-new3.jpg');
+    background: url('/staticfiles/images/Background/bg-new3.jpg');
     background-position: top left !important;
 }
 
 .slider-4 {
-    background: url('./Images/Background/bg-new4.jpg');
+    background: url('/staticfiles/images/Background/bg-new4.jpg');
     background-position: 100% 100%;
 }
 
 .slider-5 {
-    background: url('./Images/Background/bg-new-5.jpg');
+    background: url('/staticfiles/images/Background/bg-new-5.jpg');
     background-position: top left;
 }
 
 .slider-6 {
-    background: url('./Images/Background/bg-new-6.jpg');
+    background: url('/staticfiles/images/Background/bg-new-6.jpg');
     background-position: 100% 90%;
 }
 
 .slider-7 {
-    background: url('./Images/Background/bg-new-7.jpg');
+    background: url('/staticfiles/images/Background/bg-new-7.jpg');
     background-position: center;
 }
 
@@ -671,7 +671,7 @@ html {
 .schedule::after {
     content: '';
     position: absolute;
-    background: url('./Images/Icons/ver-separator.png');
+    background: url('/staticfiles/images/Icons/ver-separator.png');
     width: 20px;
     height: 144px;
     background-repeat: repeat-y;
@@ -788,7 +788,7 @@ h1:nth-of-type(3) {
     min-height: calc(120vh);
     align-items: center !important;
     justify-content: center !important;
-    background: url('./Images/Gallery/2.jpg');
+    background: url('/staticfiles/images/Gallery/2.jpg');
     background-repeat: no-repeat;
     background-size: cover !important;
     background-attachment: fixed;
@@ -929,7 +929,7 @@ h1:nth-of-type(3) {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    background: url('./Images/Gallery/4.jpg');
+    background: url('/staticfiles/images/Gallery/4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1139,7 +1139,7 @@ h1:nth-of-type(3) {
     justify-content: center;
     min-height: calc(70vh);
     position: relative;
-    background: url('./Images/Gallery/restaurant\ kitchen.jpeg');
+    background: url('/staticfiles/images/Gallery/restaurant\ kitchen.jpeg');
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1268,7 +1268,7 @@ h1:nth-of-type(3) {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: url('./Images/Slider/8.jpg');
+    background: url('/staticfiles/images/Slider/8.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1445,7 +1445,7 @@ h1:nth-of-type(3) {
 
     min-height: 70vh;
 
-    background: url('./Images/Gallery/contact.jpg');
+    background: url('/staticfiles/images/Gallery/contact.jpg');
 
     background-position: top center;
 
@@ -1609,7 +1609,7 @@ h1:nth-of-type(3) {
 .testimonials {
     min-height: calc(100vh - 100px);
     position: relative;
-    background: url('./Images/Gallery/review.jpg');
+    background: url('/staticfiles/images/Gallery/review.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
