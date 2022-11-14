@@ -132,9 +132,9 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/navoiytr/django/staticfiles'
-STATICFILES_DIRS = '/home/navoiytr/django/static'
-MEDIA_URL = 'media/'
-MEDIA_ROOT = '/home/navoiytr/django/media'
+STATICFILES_DIRS = ['/home/navoiytr/django/static']
+MEDIA_URL = '/'
+MEDIA_ROOT = '/home/navoiytr/django'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
