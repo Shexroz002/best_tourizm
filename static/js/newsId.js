@@ -47,7 +47,7 @@ class News {
 const getNews = async (id) => {
   try {
     const response = await fetch(
-      `https://navoiytourizm.pythonanywhere.com/api/yangiliklar/${id}`,
+      `http://navoiytravel.uz/api/yangiliklar/${id}`,
       {
         method: "GET",
         headers: {
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
 // yangililar : 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/yangiliklar`)
+fetch( `http://navoiytravel.uz/api/yangiliklar`)
     .then( response => response.json() )
     .then(response => {
       console.log(response)

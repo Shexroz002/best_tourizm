@@ -3,7 +3,7 @@ hash = hash.substring(1)
 
 // bizning muzeylarimiz 
 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/bizning/muzeylar?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/bizning/muzeylar?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
         let museumSection = document.querySelector("#our_museum_id");
@@ -65,7 +65,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/bizning/muzeylar?language=$
 
 // bizning restoranlar haqida
 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/restaran/haqida?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/restaran/haqida?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
          let restarantText = document.querySelector("#restarant_text");
@@ -80,7 +80,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/restaran/haqida?language=${
 
 // bizning restoranlar rasmlari
 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/restaran/rasmlar?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/restaran/rasmlar?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
         let restorantSection = document.querySelector("#restorant_rasmlari");
@@ -107,7 +107,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/restaran/rasmlar?language=$
 
 // bizning savdo markazlarimiz haqida
 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/savdo/markaz/haqida?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/savdo/markaz/haqida?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
       let shopText = document.querySelector("#malls-text"); 
@@ -122,7 +122,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/savdo/markaz/haqida?languag
 
 // bizning savdo markazlarimiz rasmlari
 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/savdo/markaz/rasmlari?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/savdo/markaz/rasmlari?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
         let shopSection = document.querySelector("#shop_data_img");
@@ -147,7 +147,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/savdo/markaz/rasmlari?langu
 
 // bizning ko'rgazmalar
 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/korgazmalar?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/korgazmalar?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
         let ourFotoSection = document.querySelector("#kurgazmalar_rasmi");

@@ -2,7 +2,7 @@ let hash = window.location.hash;
 hash = hash.substring(1)
 
 //tarixiy joylar
-fetch( `https://navoiytourizm.pythonanywhere.com/api/tarixiy/turizm/rasmlar?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/tarixiy/turizm/rasmlar?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
       console.log("Response : ", response)
@@ -66,7 +66,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/tarixiy/turizm/rasmlar?lang
 })
 
 //bizning galereyamiz
-fetch( `https://navoiytourizm.pythonanywhere.com/api/bizning/galeryamiz`)
+fetch( `http://navoiytravel.uz/api/bizning/galeryamiz`)
     .then( response => response.json() )
     .then(response => {
       console.log("Bizning galeriyamiz : ", response)
@@ -92,7 +92,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/bizning/galeryamiz`)
 
 
 // biz bilan bog'laning
-fetch( `https://navoiytourizm.pythonanywhere.com/api/client/bilan/boglanish?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/client/bilan/boglanish?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
          let ourAboutUl = document.querySelector("#contact_ul");
@@ -137,7 +137,7 @@ form.addEventListener('submit', function(e){
     let email = document.querySelector('#input-email').value;
     let textArea = document.querySelector('#story').value;
     if(textArea.trim()){
-      fetch(`https://navoiytourizm.pythonanywhere.com/api/biz/bilan/boglanish`, {
+      fetch(`http://navoiytravel.uz/api/biz/bilan/boglanish`, {
         method: 'POST',
         body: JSON.stringify({
             name: name,

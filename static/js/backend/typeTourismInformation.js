@@ -3,7 +3,7 @@ hash = hash.substring(1)
 
 // bizning gastro turizm 1
 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/turizm/turlari?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/turizm/turlari?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
          let gastroSection1 = document.querySelector("#gastro_turizm1");
@@ -24,7 +24,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/turizm/turlari?language=${h
 
 // bizning gastro turizm 2
 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/turizm/turlari?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/turizm/turlari?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
          let gastroSection1 = document.querySelector("#gastro_turizm2");
@@ -44,7 +44,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/turizm/turlari?language=${h
 })
 
 // etnik turizm backend
-fetch( `https://navoiytourizm.pythonanywhere.com/api/etnik/turizm?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/etnik/turizm?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
         let ourEtnik = document.querySelector("#etnik_all_images");
@@ -73,7 +73,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/etnik/turizm?language=${has
 
 // bizning tarixiy turizm 
 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/turizm/turlari?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/turizm/turlari?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
          let gastroSection1 = document.querySelector("#tarixiy_turizm");
@@ -94,7 +94,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/turizm/turlari?language=${h
 
 // tarixiy turizm rasmlar
 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/tarixiy/turizm/rasmlar?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/tarixiy/turizm/rasmlar?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
         let ourFotoSection = document.querySelector("#tarixiy_turizm_rasm");
@@ -117,7 +117,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/tarixiy/turizm/rasmlar?lang
 
 
 // ekstremal turizm backend
-fetch( `https://navoiytourizm.pythonanywhere.com/api/extremal/turizm?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/extremal/turizm?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
         let ourEtnik = document.querySelector("#extremal_all_images");
@@ -146,7 +146,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/extremal/turizm?language=${
 })
 
 // safari turizm backend
-fetch( `https://navoiytourizm.pythonanywhere.com/api/safar/turizm/rasmlar?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/safar/turizm/rasmlar?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
         let ourEtnik = document.querySelector("#safari_all_images");

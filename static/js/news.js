@@ -5,7 +5,7 @@ const SliderWrapper = document.querySelector("#news-slider");
 const getAllNews = async () => {
   try {
     const response = await fetch(
-      `https://navoiytourizm.pythonanywhere.com/api/yangiliklar?language=${hash}`,
+      `http://navoiytravel.uz/api/yangiliklar?language=${hash}`,
       {
         method: "GET",
         headers: {

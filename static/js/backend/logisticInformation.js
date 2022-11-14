@@ -3,7 +3,7 @@ hash = hash.substring(1)
 
 //Bizning Logistika Turlarimiz
 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/logistika/turlari?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/logistika/turlari?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
         let ourFotoSection = document.querySelector("#logistika_turlari");
@@ -29,7 +29,7 @@ fetch( `https://navoiytourizm.pythonanywhere.com/api/logistika/turlari?language=
 
 //Bizning Logistika Turlarimiz
 
-fetch( `https://navoiytourizm.pythonanywhere.com/api/logistika/rasmlari?language=${hash}`)
+fetch( `http://navoiytravel.uz/api/logistika/rasmlari?language=${hash}`)
     .then( response => response.json() )
     .then(response => {
         let ourFotoLogistika = document.querySelector("#logistika_rasmlari");
