@@ -1,0 +1,1993 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&family=Montserrat:wght@400;500;600;700;800;900&family=Playball&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --primaryFontFamily: 'Montserrat',
+        sans-serif;
+    --primaryColor: #C59D5F;
+    --primaryHoverColor: #2a2a2a;
+    --primaryBackground: #2a2a2a;
+    --primaryTransition: all 0.3s linear;
+    --primaryOpacity: 1;
+    --primaryMargin: 10px;
+    --primaryPadding: 10px;
+    --secondaryFontFamily: 'Poppins',
+        sans-serif;
+    --secondaryColor: #fff;
+    --secondaryHoverColor: #000;
+    --secondaryBackground: #191919;
+    --secondaryTransition: all 0.5s linear;
+    --accentFontFamily: 'Playball',
+        cursive;
+    --additionalFontFamily: 'Cabin',
+        sans-serif;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    /* background: linear-gradient(transparent, #C59D5F); */
+    /* border-radius: 6px; */
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    /* background: linear-gradient(transparent, hsla(36, 47%, 57%, 0.718)); */
+    background: transparent;
+}
+
+::selection {
+    background: #C59D5F;
+    color: rgb(255, 255, 255);
+}
+
+*,
+::before,
+::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR AUTOHIDE WHILE SCROLLING DOWN START */
+.scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.scrolled-up {
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+}
+
+/* NAVBAR AUTOHIDE WHILE SCROLLING DOWN END */
+.autohide {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.modal {
+    z-index: 214748364565 !important;
+}
+
+/* NAVBAR START */
+.main_nav {
+    width: 100%;
+    z-index: 214748364 !important;
+    border-bottom: 2px solid var(--primaryColor);
+}
+
+.custom-nav {
+    font-family: var(--primaryFontFamily);
+    font-weight: 500;
+    padding: 20px 0px;
+}
+
+.logo {
+    width: 55px;
+}
+
+.custom-nav-item {
+    padding: 10px 20px;
+}
+
+.navbar-logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.custom-nav-link {
+    transition: var(--primaryTransition);
+    color: #fff !important;
+}
+
+.active {
+    color: var(--primaryColor) !important;
+}
+
+.custom-nav-link:hover {
+    color: var(--primaryColor) !important;
+}
+
+/* NAVBAR MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:768px) {
+    .custom-nav-item {
+        padding: 5px 10px !important;
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:500px) {
+    .main_nav {
+        padding: 15px 0px;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1200px) {
+    .navbar-logo {
+        display: none;
+    }
+}
+
+/* NAVBAR MEDIA QUERY END */
+/* NAVBAR END */
+
+/* SECTION - 1 START */
+.home-page {
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    background: #000;
+    height: 100%;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 2;
+    background-attachment: fixed;
+}
+
+/* SWIPER SLIDER */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.custom-swiper-container {
+    filter: brightness(0.4) blur(0px);
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--primaryColor);
+}
+
+.swiper-pagination-bullet {
+    background: #191919;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primaryColor);
+}
+
+/* SWIPER SLIDER END */
+.slider-1,
+.slider-2,
+.slider-3,
+.slider-4,
+.slider-5,
+.slider-6,
+.slider-7 {
+    height: 100%;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    background-size: cover !important;
+}
+
+.slider-1 {
+    background: url('http://navoiytravel.uz/static/images/Background/bg-new-1.jpg');
+    background-position: 100% 100% !important;
+}
+
+.slider-2 {
+    background: url('http://navoiytravel.uz/static/images/Background/bg-new2.jpg');
+    background-position: 100% 100% !important;
+}
+
+.slider-3 {
+    background: url('http://navoiytravel.uz/static/images/Background/bg-new3.jpg');
+    background-position: top left !important;
+}
+
+.slider-4 {
+    background: url('http://navoiytravel.uz/static/images/Background/bg-new4.jpg');
+    background-position: 100% 100%;
+}
+
+.slider-5 {
+    background: url('http://navoiytravel.uz/static/images/Background/bg-new-5.jpg');
+    background-position: top left;
+}
+
+.slider-6 {
+    background: url('http://navoiytravel.uz/static/images/Background/bg-new-6.jpg');
+    background-position: 100% 90%;
+}
+
+.slider-7 {
+    background: url('http://navoiytravel.uz/static/images/Background/bg-new-7.jpg');
+    background-position: center;
+}
+
+.slider-title {
+    background: transparent;
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+}
+
+.slider-title h1 {
+    font-weight: bold;
+    font-family: var(--accentFontFamily);
+    color: #fff;
+    font-size: 3.7em;
+}
+
+.slider-title p {
+    font-family: var(--primaryFontFamily);
+    font-weight: 600;
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    font-size: 1.2em;
+    position: relative;
+}
+
+.slider-title p::before {
+    content: '';
+    background: var(--primaryColor);
+    width: 75px;
+    height: 3px;
+    position: absolute;
+    left: -65px;
+    top: 12px;
+    opacity: 0.8;
+}
+
+.slider-title p::after {
+    content: '';
+    background: var(--primaryColor);
+    width: 75px;
+    height: 3px;
+    position: absolute;
+    top: 12px;
+    opacity: 0.8;
+    right: -11%;
+}
+
+.star-icon {
+    width: 100px;
+    margin: auto;
+    position: relative;
+    height: 50px;
+    border-left: 3px solid var(--primaryColor);
+    border-right: 3px solid var(--primaryColor);
+    border-bottom: 3px solid var(--primaryColor);
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+
+.custom-star-icon {
+    font-size: 18px;
+    color: var(--primaryColor);
+}
+
+.scroll-icon {
+    color: var(--primaryColor);
+    font-size: 30px;
+    position: relative;
+    top: 25px;
+}
+
+.custom-scroll-icon {
+    animation: moveDown 4s infinite;
+    animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    color: var(--primaryColor) !important;
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* SECTION - 1 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:768px) {
+
+    .slider-title p::before,
+    .slider-title p::after {
+        display: none;
+    }
+
+    .homepage-swiper-next,
+    .homepage-swiper-prev {
+        display: none;
+    }
+
+    .slider-title p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1368px) {
+    .slider-title p::before {
+
+        left: -85px;
+
+        height: 2px;
+
+        top: 11px;
+
+    }
+
+    .slider-title p::after {
+
+        top: 11px;
+
+        height: 2px;
+
+        right: -19%;
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:991px) {
+    .slider-title h1 {
+        font-size: 2.875em;
+    }
+
+    .slider-title p {
+        font-size: 1.01em;
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:325px) {
+    .slider-title h1 {
+        font-size: 2.7em !important;
+    }
+
+    @keyframes moveDown {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(30px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+}
+
+/* SECTION - 1 MEDIA QUERY END */
+/* SECTION - 1 END */
+
+/* SECTION - 2 START */
+.about-page {
+    min-height: calc(100vh - 0px);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.about-title {
+    text-align: center;
+}
+
+.custom-swiper-next,
+.custom-swiper-prev {
+    background: #2a2a2a;
+    border-radius: 50%;
+    padding: 25px;
+}
+
+.custom-swiper-next::after,
+.custom-swiper-prev::after {
+    font-size: 32px !important;
+}
+
+.custom-about-swiper-container {
+    width: 100%;
+    height: 80%;
+    margin-top: 85px;
+    cursor: e-resize;
+}
+
+.about-title h1 {
+    font-family: var(--accentFontFamily);
+    color: var(--primaryColor);
+    font-size: 3.7em;
+}
+
+.about-title h4 {
+    text-transform: uppercase;
+    font-family: var(--secondaryFontFamily);
+    font-weight: bold;
+    font-size: 1.4em;
+    letter-spacing: 4px;
+    position: relative;
+}
+
+.about-title h4::before {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 2.5px;
+    background: var(--primaryColor);
+    top: 37.2% !important;
+    left: 21%;
+}
+
+.about-title h4::after {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 2.5px;
+    background: var(--primaryColor);
+    top: 37.2%;
+    left: 66%;
+}
+
+.about-description p {
+    font-family: var(--secondaryFontFamily);
+    text-align: justify;
+}
+
+.menu-link {
+    text-align: left;
+    font-family: var(--additionalFontFamily);
+    text-transform: uppercase;
+}
+
+.menu-link a {
+    text-decoration: none;
+    color: var(--primaryColor);
+    letter-spacing: 3px;
+    font-size: 20px;
+    transition: var(--primaryTransition);
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.custom-menu-link {
+    margin-top: 15px;
+}
+
+.menu-link a:hover {
+    color: var(--primaryHoverColor);
+}
+
+/* SECTION - 2 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:1368px) {
+    @media screen and (min-width:280px) and (max-width:768px) {
+        .about-page {
+            margin: 100px 0px;
+        }
+
+        .custom-about-swiper-container {
+            width: 100%;
+            height: 278.125px;
+            margin-top: 45px;
+            margin-left: 0px;
+        }
+
+        .custom-swiper-next::after,
+        .custom-swiper-prev::after {
+            font-size: 16px !important;
+        }
+
+        .custom-swiper-next,
+        .custom-swiper-prev {
+            padding: 15px 22px;
+        }
+
+        .customized-grid {
+
+            margin-top: 60px;
+
+        }
+    }
+
+    .about-title h4::before,
+    .about-title h4::after {
+        display: none;
+    }
+
+    @media screen and (min-width:768px) and (max-width:991px) {
+        .about-page {
+            margin: 100px 0px;
+        }
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:325px) {
+    .about-title h1 {
+        font-size: 2.797em !important;
+    }
+
+    .about-title h4 {
+        font-size: 1.4em;
+    }
+
+    .menu-link a {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width:1368px) and (max-width:1400px) {
+    .about-title h4::before {
+        left: 16%;
+    }
+
+    .about-title h4::after {
+        left: 69%;
+    }
+}
+
+@media screen and (min-width:1400px) and (max-width:1400px) {
+
+    .about-title h4::before,
+    .about-title h4::after {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1401px) and (max-width:1500px) {
+    .about-title h4::before {
+        left: 21%;
+    }
+
+    .about-title h4::after {
+        left: 66%;
+    }
+}
+
+/* SECTION - 2 MEDIA QUERY END */
+/* SECTION - 2 END */
+
+/* SECTION - 3 START */
+.opening-hours-page {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative;
+    text-align: center;
+    min-height: calc(100vh - 100px);
+}
+
+.opening-hours-page-content {
+    position: absolute;
+    z-index: 2;
+}
+
+.opening-hours {
+    width: 40%;
+    margin: auto;
+}
+
+.opening-hours h1:nth-of-type(1) {
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: 'Poppins';
+}
+
+.opening-hours h1:nth-of-type(2) {
+    color: var(--primaryColor);
+    font-family: var(--accentFontFamily);
+    margin-bottom: 30px;
+    font-weight: bold;
+    position: relative;
+}
+
+.opening-hours h1:nth-of-type(2)::before {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 2px;
+    background: var(--primaryColor);
+    left: 0%;
+    top: 50%;
+}
+
+.opening-hours h1:nth-of-type(2)::after {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 2px;
+    background: var(--primaryColor);
+    right: 0%;
+    top: 50%;
+}
+
+.schedule {
+    color: #fff;
+    position: relative;
+}
+
+.schedule::after {
+    content: '';
+    position: absolute;
+    background: url('http://navoiytravel.uz/static/images/Icons/ver-separator.png');
+    width: 20px;
+    height: 144px;
+    background-repeat: repeat-y;
+    top: 0px;
+    right: -20px;
+}
+
+.schedule-after-none::after {
+    display: none;
+}
+
+.schedule h1:nth-of-type(2),
+h1:nth-of-type(3) {
+    font-family: 'Poppins';
+}
+
+.schedule h1:nth-of-type(1),
+.number {
+    color: var(--primaryColor);
+    font-family: var(--accentFontFamily);
+    font-weight: bold;
+}
+
+.video-container video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    object-fit: cover !important;
+}
+
+/* SECTION - 3 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:1400px) {
+    @media screen and (min-width:280px) and (max-width:991px) {
+        .opening-hours h1:nth-of-type(1) {
+            font-size: 2.5em;
+        }
+
+        .opening-hours {
+            width: 100%;
+        }
+    }
+
+    .schedule::after,
+    .opening-hours h1:nth-of-type(2)::before,
+    .opening-hours h1:nth-of-type(2)::after {
+        display: none;
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:325px) {
+    .opening-hours h1:nth-of-type(1) {
+        font-size: 1.9em;
+    }
+
+    .opening-hours h1:nth-of-type(2) {
+        font-size: 1.895em;
+    }
+}
+
+/* SECTION - 3 MEDIA QUERY END */
+/* SECTION - 3 END */
+
+/* SECTION - 4 START */
+.custom-about-title::before {
+    left: 9% !important;
+}
+
+.custom-about-title::after {
+    left: 78% !important;
+}
+
+/* SECTION - 4 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:1368px) {
+    @media screen and (min-width:280px) and (max-width:768px) {
+        .custom-about-swiper-container {
+            margin-top: 0px !important;
+        }
+    }
+
+    .custom-about-title::before,
+    .custom-about-title::after {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1368px) and (max-width:1400px) {
+    .custom-about-title::before {
+        left: 3% !important;
+    }
+
+    .custom-about-title::after {
+        left: 82% !important;
+    }
+}
+
+@media screen and (min-width:1401px) and (max-width:1500px) {
+    .custom-about-title::before {
+        left: 9% !important;
+    }
+
+    .custom-about-title::after {
+        left: 79% !important;
+    }
+}
+
+/* SECTION - 4 MEDIA QUERY END */
+/* SECTION - 4 END */
+
+/* SECTION - 5 START */
+.weekly-deals {
+    display: flex;
+    min-height: calc(120vh);
+    align-items: center !important;
+    justify-content: center !important;
+    background: url('http://navoiytravel.uz/static/images/Gallery/2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.weekly-deals-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--secondaryFontFamily);
+    margin-top: 100px;
+}
+
+.weekly-deals-header h2 {
+    font-family: var(--accentFontFamily);
+    color: var(--primaryColor);
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+
+.weekly-deals-content {
+    margin: auto;
+    line-height: 50px;
+    width: 70%;
+}
+
+.weekly-deals-days span:nth-of-type(1) {
+    font-size: 2.5em;
+    font-family: var(--accentFontFamily);
+    color: var(--primaryColor);
+}
+
+.weekly-deals-days small {
+    font-family: var(--secondaryFontFamily);
+    text-transform: capitalize;
+}
+
+.weekly-deals-items {
+    font-family: var(--additionalFontFamily);
+    color: var(--primaryColor);
+    display: flex;
+    flex-direction: row;
+}
+
+.weekly-deals-items span:nth-of-type(1),
+.weekly-deals-items span:nth-of-type(3) {
+    font-family: var(--secondaryFontFamily);
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #fff;
+}
+
+.rounded-dots {
+    width: 70%;
+    border-bottom: 2px dotted var(--primaryColor);
+    height: 1px;
+    margin-top: 30px;
+}
+
+.custom-menu-link a:hover {
+    color: #fff !important;
+}
+
+/* SECTION - 5 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:991px) {
+    @media screen and (min-width:280px) and (max-width:325px) {
+        .weekly-deals-header h1 {
+            font-size: 2em !important;
+        }
+
+        .weekly-deals-header h2 {
+            font-size: 1.5em;
+        }
+
+        .rounded-dots {
+            width: 66%;
+        }
+    }
+
+    .weekly-deals {
+        margin-bottom: 100px;
+    }
+
+    .weekly-deals-header h1 {
+        font-size: 2.5em;
+    }
+
+    .weekly-deals-content {
+        width: 100%;
+        line-height: 35px;
+        margin: 15px 0px;
+    }
+
+    .weekly-deals-days span:nth-of-type(1) {
+        font-size: 2em !important;
+    }
+
+    .weekly-deals-items span:nth-of-type(1),
+    .weekly-deals-items span:nth-of-type(3) {
+        font-size: 1.3em;
+    }
+
+    .custom-menu-link {
+        margin-bottom: 40px;
+    }
+
+    .rounded-dots {
+        width: 43%;
+    }
+
+    @media screen and (min-width:768px) and (max-width:991px) {
+        .rounded-dots {
+            width: 66%;
+        }
+    }
+}
+
+@media screen and (min-width:991px) and (max-width:1400px) {
+    .custom-menu-link {
+        margin-bottom: 60px;
+    }
+}
+
+/* SECTION - 5 MEDIA QUERY END */
+/* SECTION - 5 END */
+
+
+/* SECTION - 7 START */
+.menu-banner {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    background: url('http://navoiytravel.uz/static/images/Gallery/4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-bottom: 105px;
+}
+
+.menu-banner-title {
+    text-align: center;
+}
+
+.menu-banner-title h1 {
+    font-size: 3.7em;
+    font-family: var(--accentFontFamily);
+    color: var(--primaryColor);
+}
+
+.menu-banner-title h3 {
+    color: #fff;
+    font-family: var(--additionalFontFamily);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* SECTION - 7 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:768px) {
+    @media screen and (min-width:280px) and (max-width:325px) {
+        .menu-banner-title h1 {
+            font-size: 2.797em !important;
+        }
+    }
+
+    .menu-banner-title h1 {
+        font-size: 3.7em;
+    }
+
+    .menu-banner-title h3 {
+        font-size: 23px;
+    }
+}
+
+/* SECTION - 7 MEDIA QUERY END */
+/* SECTION - 7 END */
+
+/* SECTION - 8 START */
+.full-menu {
+    min-height: calc(100vh);
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 85px;
+}
+
+.full-menu-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.full-menu-title h1 {
+    font-family: var(--accentFontFamily);
+    color: var(--primaryColor);
+    text-transform: capitalize;
+    font-size: 3.7em;
+}
+
+.full-menu-title h4 {
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.full-menu-title h4::before {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 2.5px;
+    background: var(--primaryColor);
+    top: 14px;
+    left: 25.5%;
+}
+
+.full-menu-title h4::after {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 2.5px;
+    background: var(--primaryColor);
+    top: 14px;
+    right: 25.5%;
+}
+
+.full-menu-title img {
+    margin: 25px 0px;
+}
+
+.menu-items {
+    text-transform: capitalize;
+    margin: 25px 0px;
+    position: relative;
+}
+
+.menu-items span:nth-of-type(1) {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4em;
+    font-weight: 500;
+    transition: var(--primaryTransition);
+    cursor: pointer;
+}
+
+.menu-items span:nth-of-type(1):hover {
+    color: var(--primaryColor);
+}
+
+.menu-items span:nth-of-type(3) {
+    font-family: 'Cabin';
+    font-size: 1.4em;
+}
+
+.menu-items p {
+    font-family: 'Poppins';
+}
+
+.custom-rounded-dots {
+    width: 50%;
+    border-bottom: 2px dotted var(--primaryHoverColor);
+    height: 1px;
+    display: inline-flex;
+}
+
+.chef-selection-item {
+    border: 2px solid var(--primaryColor);
+    padding: 20px 40px;
+}
+
+.chef-selection {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    background: var(--primaryColor);
+    color: #fff;
+    padding: 0px 20px;
+    letter-spacing: 2px;
+}
+
+.chef-selection span {
+    font-size: 1em !important;
+    font-family: var(--accentFontFamily) !important;
+    transition: none !important;
+    cursor: progress !important;
+}
+
+.chef-selection span:hover {
+    color: #fff !important;
+}
+
+/* SECTION - 8 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:991px) {
+    .full-menu-title h1 {
+        font-size: 3.7em !important;
+    }
+
+    .menu-items span:nth-of-type(1),
+    .menu-items span:nth-of-type(3) {
+        font-size: 1.1em !important;
+    }
+
+    .custom-rounded-dots {
+        width: 23%;
+        height: 1px;
+        border-bottom: 2px solid var(--primaryHoverColor);
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:325px) {
+    .full-menu-title h1 {
+        font-size: 2.797em !important;
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:1368px) {
+
+    .full-menu-title h4::before,
+    .full-menu-title h4::after {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1368px) and (max-width:1401px) {
+    .full-menu-title h4::before {
+        left: 21%;
+    }
+
+    .full-menu-title h4::after {
+        right: 21%;
+    }
+}
+
+/* SECTION - 8 MEDIA QUERY END */
+/* SECTION - 8 END */
+
+/* SECTION - 9 START */
+.gallery-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(70vh);
+    position: relative;
+    background: url('http://navoiytravel.uz/static/images/Gallery/restaurant\ kitchen.jpeg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-direction: column;
+    margin-bottom: 130px;
+}
+
+.gallery-banner-title {
+    z-index: 4 !important;
+    text-align: center;
+}
+
+.gallery-banner-title h1 {
+    color: var(--primaryColor);
+    font-family: 'Playball';
+    font-size: 3.7em;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.gallery-banner-title h3 {
+    color: var(--secondaryColor);
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* SECTION - 9 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:768px) {
+    @media screen and (min-width:280px) and (max-width:325px) {
+        .gallery-banner-title h1 {
+            font-size: 2.797em !important;
+        }
+    }
+
+    .gallery-banner-title h1 {
+        font-size: 3.7em;
+    }
+
+    .gallery-banner-title h3 {
+        font-size: 23px;
+        margin-top: 15px;
+    }
+}
+
+/* SECTION - 9 MEDIA QUERY END */
+/* SECTION - 9 END */
+
+/* SECTION - 10 START */
+.gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.gallery-images {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.gallery-images i {
+    position: absolute;
+    z-index: 4;
+    font-size: 28px;
+    color: var(--primaryColor);
+    left: 50%;
+    top: 0%;
+    opacity: 0;
+    animation: zoomOut 0.3s 1;
+    animation-timing-function: linear;
+}
+
+.gallery-images img {
+    transition: var(--primaryTransition);
+    cursor: pointer;
+    box-shadow: 2px 2px 10px #191919;
+}
+
+.gallery-images img:hover {
+    filter: brightness(0.4);
+}
+
+.gallery-images:hover i {
+    opacity: 1;
+    animation: zoomIn 0.3s 1;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@keyframes zoomIn {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        top: 50%;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0%;
+        opacity: 0;
+    }
+}
+
+/* SECTION - 10 MEDIA QUERY START */
+/* SECTION - 10 MEDIA QUERY END */
+/* SECTION - 10 END */
+
+/* SECTION - 11 START */
+.reservation-banner {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: url('http://navoiytravel.uz/static/images/Slider/8.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 120px;
+}
+
+.reservation-banner-title {
+    text-align: center;
+}
+
+.reservation-banner-title h1 {
+    font-family: 'Playball';
+    color: var(--primaryColor);
+    font-size: 3.7em;
+}
+
+.reservation-banner-title h3 {
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* SECTION - 11 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:768px) {
+    @media screen and (min-width:280px) and (max-width:325px) {
+        .reservation-banner-title h1 {
+            font-size: 2.797em !important;
+        }
+
+        .reservation-banner-title h3 {
+            font-size: 23px !important;
+        }
+    }
+
+    .reservation-banner-title h1 {
+        font-size: 3.7em;
+    }
+
+    .reservation-banner-title h3 {
+        font-size: 25px;
+        margin-top: 15px;
+    }
+}
+
+/* SECTION - 11 MEDIA QUERY END */
+/* SECTION - 11 END */
+
+/* SECTION - 12 START */
+.reservation-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.reservation-info-title {
+    width: 65%;
+    margin: auto;
+}
+
+.reservation-info-title h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    position: relative;
+}
+
+.reservation-info-title h3::before {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 2.5px;
+    background: var(--primaryColor);
+    top: 14px;
+    left: 21%;
+}
+
+.reservation-info-title h3::after {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 2.5px;
+    background: var(--primaryColor);
+    top: 14px;
+    right: 21%;
+}
+
+.reservation-info-title p {
+    text-align: center;
+    margin-bottom: 100px;
+    font-family: 'Poppins';
+}
+
+.form-header h4 {
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Cabin';
+}
+
+.reservation-form {
+    font-family: 'Cabin';
+}
+
+.reservation-button {
+    width: 19%;
+    margin: auto;
+}
+
+.reservation-btn {
+    background: var(--secondaryHoverColor);
+    outline: none;
+    border: none;
+    color: var(--primaryColor);
+    font-family: 'Playball';
+    text-transform: capitalize;
+    padding: 10px 25px;
+    transition: var(--primaryTransition);
+    letter-spacing: 2px;
+}
+
+.reservation-btn:hover {
+    color: var(--secondaryColor);
+}
+
+/* SECTION - 12 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:991px) {
+    .reservation-button {
+        width: 100%;
+    }
+
+    .reservation-info-title {
+        width: 100%;
+    }
+
+    .reservation-info-title h3 {
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:1368px) {
+
+    .reservation-info-title h3::before,
+    .reservation-info-title h3::after {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1368px) and (max-width:1401px) {
+    .reservation-info-title h3::before {
+        left: 17%;
+    }
+
+    .reservation-info-title h3::after {
+        right: 17%;
+    }
+}
+
+/* SECTION - 12 MEDIA QUERY END */
+/* SECTION - 12 END */
+
+/* SECTION - 13 START */
+.contact-banner {
+
+    position: relative;
+
+    min-height: 70vh;
+
+    background: url('http://navoiytravel.uz/static/images/Gallery/contact.jpg');
+
+    background-position: top center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    margin-bottom: 140px;
+}
+
+.contact-banner-title {
+    text-align: center;
+}
+
+.contact-banner-title h1 {
+    font-family: 'Playball';
+    color: var(--primaryColor);
+    font-size: 3.7em;
+}
+
+.contact-banner-title h3 {
+    font-family: 'Poppins';
+    color: #fff;
+    font-weight: 600;
+}
+
+/* SECTION - 13 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:325px) {
+    .contact-banner-title h1 {
+        font-size: 2.797em !important;
+    }
+
+    .contact-banner-title h3 {
+        font-size: 23px;
+    }
+}
+
+/* SECTION - 13 MEDIA QUERY END */
+/* SECTION - 13 END */
+
+/* SECTION - 14 START */
+.get-in-touch {
+    min-height: calc(100vh - 100px);
+    position: relative;
+    margin-bottom: 140px;
+}
+
+.get-in-touch-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.get-in-touch-title h1 {
+    font-size: 3.7em;
+    font-family: var(--accentFontFamily);
+    color: var(--primaryColor);
+}
+
+.get-in-touch-title h3 {
+    font-family: 'Cabin';
+    letter-spacing: 1px;
+    font-weight: 600;
+    position: relative;
+}
+
+.get-in-touch-title h3::before {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 2.5px;
+    background: var(--primaryColor);
+    top: 14px;
+    left: 37%;
+}
+
+.get-in-touch-title h3::after {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 2.5px;
+    background: var(--primaryColor);
+    top: 14px;
+    right: 37%;
+}
+
+.get-in-touch-form {
+    width: 50%;
+    margin: auto;
+    font-family: 'Cabin';
+}
+
+.get-in-touch-form input {
+    border-radius: 2px;
+    background: #f9f9f9;
+    padding: 12px;
+}
+
+.get-in-touch-form textarea {
+    border-radius: 2px !important;
+    background: #f9f9f9;
+}
+
+.get-in-touch-btn {
+    outline: none;
+    background: #fff;
+    border: 1px solid var(--primaryColor);
+    font-family: var(--accentFontFamily);
+    transition: var(--primaryTransition);
+}
+
+.get-in-touch-btn:hover {
+    background: var(--secondaryBackground);
+    color: var(--primaryColor);
+    border: 1px solid var(--secondaryBackground);
+}
+
+/* SECTION - 14 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:1368px) {
+    @media screen and (min-width:280px) and (max-width:991px) {
+        @media screen and (min-width:280px) and (max-width:325px) {
+            .get-in-touch-title h1 {
+                font-size: 2.797em !important;
+            }
+
+            .get-in-touch-title h3 {
+                font-size: 23px !important;
+            }
+        }
+
+        .get-in-touch-form {
+            width: 100%;
+        }
+
+        .get-in-touch-btn {
+            width: 100%;
+        }
+    }
+
+    .get-in-touch-title h3::before,
+    .get-in-touch-title h3::after {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1368px) and (max-width:1401px) {
+    .get-in-touch-title h3::before {
+        left: 35%;
+    }
+
+    .get-in-touch-title h3::after {
+        right: 35%;
+    }
+}
+
+/* SECTION - 14 MEDIA QUERY END */
+/* SECTION - 14 END */
+
+/* SECTION - 15 START */
+.testimonials {
+    min-height: calc(100vh - 100px);
+    position: relative;
+    background: url('http://navoiytravel.uz/static/images/Gallery/review.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.testimonials-title {
+    text-align: center;
+    margin-top: 120px !important;
+}
+
+.testimonials-title h1 {
+    font-size: 3.7em;
+    font-family: 'Playball';
+    color: var(--primaryColor);
+    text-transform: capitalize;
+}
+
+.testimonials-title h3 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.testimonials-slider {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 85px !important;
+}
+
+.testimonials-images img {
+    width: 128px !important;
+}
+
+.customer-name {
+    font-family: 'Poppins';
+    color: #fff;
+}
+
+.testimonials-content {
+    font-family: 'Poppins';
+    color: #fff;
+}
+
+.rating i {
+    color: var(--primaryColor);
+}
+
+/* SECTION - 15 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:991px) {
+    @media screen and (min-width:280px) and (max-width:325px) {
+        .testimonials-title h1 {
+            font-size: 2.797em !important;
+        }
+
+        .testimonials-title h3 {
+            font-size: 23px !important;
+        }
+    }
+
+    .testimonials-slider {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+}
+
+/* SECTION - 15 MEDIA QUERY END */
+/* SECTION - 15 END */
+
+/* SECTION - 16 START */
+.location_info {
+    min-height: calc(100vh - 100px);
+    position: relative;
+    background-color: #191919;
+    background-attachment: fixed;
+}
+
+.location_header {
+    color: var(--primaryColor);
+    font-family: 'Playball';
+    margin-top: 100px !important;
+}
+
+.location_header h1 {
+    font-size: 3.7em;
+}
+
+#map {
+    height: 270.4px;
+    border-radius: 2px;
+}
+
+.location-content {
+    margin-bottom: 30px;
+}
+
+.location-heading {
+    font-family: 'Poppins';
+    color: var(--primaryColor);
+}
+
+.location-heading h6 {
+    font-weight: 700;
+}
+
+.location-info {
+    color: #fff;
+    font-family: 'Cabin';
+}
+
+.location-info span:hover {
+    text-decoration: underline;
+}
+
+.newsletter-title {
+    color: var(--primaryColor);
+}
+
+.newsletter-title h6 {
+    font-weight: 700;
+}
+
+.newsletter {
+    font-family: 'Playball';
+}
+
+.btn-newsletter {
+    background: #C59D5F;
+    color: #000;
+    transition: var(--primaryTransition);
+    font-weight: 700;
+    opacity: 0.95;
+}
+
+.btn-newsletter:hover {
+    color: #fff;
+}
+
+.social-icons {
+    color: #fff;
+    cursor: pointer;
+}
+
+.social-icons i {
+    font-size: 20px;
+    transition: var(--primaryTransition);
+}
+
+.social-icons i:hover {
+    color: #C59D5F;
+    transform: scale(1.167);
+}
+
+/* SECTION - 16 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:991px) {
+    @media screen and (min-width:280px) and (max-width:325px) {
+        .location_header h1 {
+            font-size: 2.795em;
+        }
+    }
+
+    .location_header {
+        margin-top: 100px !important;
+        margin-bottom: 65px !important;
+    }
+
+    #map {
+        margin-bottom: 60px;
+    }
+
+    .margin-top-0 {
+        margin-top: 0px !important;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1400px) {
+    #map {
+        height: 100%;
+    }
+}
+
+/* SECTION - 16 MEDIA QUERY END */
+/* SECTION - 16 END */
+
+/* SECTION - 17 START */
+.footer {
+    position: relative;
+    background-color: #191919;
+    font-family: 'Poppins';
+}
+
+.copyright {
+    font-family: 'Poppins';
+    color: #fff;
+}
+
+.created_by {
+    color: #fff;
+    width: 90%;
+    margin: auto;
+}
+
+.created_by h6 i {
+    color: var(--bs-danger);
+    animation: heart 1.5s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(1);
+        color: var(--bs-danger);
+    }
+
+    50% {
+        transform: scale(1.2);
+        color: var(--bs-info);
+    }
+
+    100% {
+        transform: scale(1);
+        color: var(--bs-danger);
+    }
+}
+
+.created_by h6 a {
+    font-family: 'Playball';
+    text-decoration: none;
+    color: var(--primaryColor);
+    font-weight: 600;
+}
+
+.created_by h6 a:hover {
+    text-decoration: underline;
+}
+
+.backToTop h6 {
+    color: #fff;
+}
+
+.backToTop h6 a {
+    text-decoration: none;
+    color: var(--secondaryColor);
+    transition: var(--primaryTransition);
+}
+
+.backToTop h6 a:hover {
+    color: var(--primaryColor);
+}
+
+/* SECTION - 17 MEDIA QUERY START */
+@media screen and (min-width:280px) and (max-width:991px) {
+    @media screen and (min-width:280px) and (max-width:325px) {
+        .copyright {
+            margin-top: 0px !important;
+        }
+    }
+
+    .copyright {
+        text-align: center !important;
+        margin-top: 20px;
+    }
+
+    .created_by {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .backToTop {
+        text-align: center !important;
+        margin-top: 20px;
+    }
+}
+
+/* SECTION - 17 MEDIA QUERY END */
+/* SECTION - 17 END */
+
+.img-wrap-section{
+    position: relative;
+    padding: 50px 20px;
+}
+
+.img-wrap-section .weekly-deals-header{
+    margin-top: 0px;
+    margin-bottom: 60px;
+}
+
+.hotelSwiper .swiper-slide{
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotelSwiper .swiper-slide img{
+    height: 300px;
+}
+
+.hotelSwiper .swiper-slide .text-hotels{
+    padding: 10px;
+    text-align: start;
+    height: 250px;
+    border: 1px solid #e8e6e6;
+}
+
+.hotelSwiper .img-section-next::after{
+    position: relative;
+    bottom: 12rem;
+    right: 15px;
+    font-size: 22px;
+    padding: 8px 16px;
+    background-color: #C59D5F;
+    color: #fff;
+    border-radius: 6px;
+    /* sout force, audio city */
+}
+
+.hotelSwiper .img-section-prev::after{
+    position: relative;
+    bottom: 12rem;
+    left: 15px;
+    font-size: 22px;
+    padding: 8px 16px;
+    background-color: #C59D5F;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.hotelSwiper .swiper-slide .text-hotels h4{
+  font-size: 22px;
+  font-weight: 500;
+  color: #000;
+}
+
+.hotelSwiper .swiper-slide .text-hotels ul{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0px 0px 10px 0px;
+    margin: 0%;
+}
+
+.hotelSwiper .swiper-slide .text-hotels ul li i{
+    font-size: 16px;
+    color: #C59D5F;
+}
+
+.hotelSwiper .swiper-slide .text-hotels p{
+   font-size: 16px;
+   line-height: 1.5;
+   color: #000;
+}
+
+.hotelSwiper .swiper-slide .text-hotels .img-hotels-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hotelSwiper .swiper-slide .text-hotels .img-hotels-box a{
+    padding: 7px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: #C59D5F;
+    border: 1px solid #C59D5F;
+    transition: all 0.3s ease;
+}
+
+.hotelSwiper .swiper-slide .text-hotels .img-hotels-box a:hover{
+    color: #C59D5F;
+    background: none;
+}
+
+.hotelSwiper .swiper-slide .text-hotels .img-hotels-box h4{
+    color: #C59D5F;
+}
