@@ -30,3 +30,4 @@ admin.site.register(EtnikTurizmRasmlari)
 admin.site.register(SafarTurizmModel)
 admin.site.register(SafarTurizmRasmlari)
 
+

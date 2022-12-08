@@ -5,7 +5,7 @@ from .models import TarixiyTurizmRasmlari,BizningGalereyamiz,BoglanishModel,\
                     TurizmTurlari,LogistikaTurlarimiz,BizningLogistikaRasmlari,Xodimlar,\
                     BizningSavdoMarkazlarhaqida,SafarTurizmModel,YangiliklarModel,\
                     ExtremalTurizmModel,EtnikTurizmModel,EtnikTurizmRasmlari,YangiliklarRasmlari,\
-                    ExtremalTurizmRasmlari,SafarTurizmRasmlari
+                    ExtremalTurizmRasmlari,SafarTurizmRasmlari,HammaSahifadaChiqadiganRasmlarModel
     
 
 
@@ -317,3 +317,23 @@ class ExtremalTurizmModelSerializerENG(serializers.ModelSerializer):
     class Meta:
         model = ExtremalTurizmModel
         fields = ('id','name_eng','title_eng','image_file','date')
+
+
+class HammaSahifadaChiqadiganRasmlarModelSerializerUZB(serializers.ModelSerializer):
+    class Meta:
+        model = HammaSahifadaChiqadiganRasmlarModel
+        fields = ('id','name_uzb','title_uzb','image_file','date')
+
+
+class HammaSahifadaChiqadiganRasmlarModelSerializerRU(serializers.ModelSerializer):
+    image_file = ExtremalTurizmRasmlariSerializer(many=True)
+    class Meta:
+        model = ExtremalTurizmModel
+        fields = ('id','name_uzb','title_ru','image_file','date')
+
+
+class HammaSahifadaChiqadiganRasmlarModelSerializerENG(serializers.ModelSerializer):
+    image_file = ExtremalTurizmRasmlariSerializer(many=True)
+    class Meta:
+        model = ExtremalTurizmModel
+        fields = ('id','name_uzb','title_eng','image_file','date')

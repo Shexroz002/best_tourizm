@@ -227,3 +227,14 @@ class SafarTurizmModel(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.name_eng
+
+
+class HammaSahifadaChiqadiganRasmlarModel(models.Model):
+    name_uzb = models.CharField(max_length = 90,default='',verbose_name = " O'zbekcha nomi")
+    title_uzb = models.TextField(max_length = 2500,default='',verbose_name = " haqida malimot kirting(Uzb)")
+    title_ru = models.TextField(max_length = 2500 ,default='',verbose_name = " haqida malimot kirting(Rus)")
+    title_eng = models.TextField(max_length = 2500,default='',verbose_name = " haqida malimot kirting(Eng)")
+    image_file  =image_file  = models.ImageField(upload_to = 'hamma_sahifada_chiqadigan_rasmlar_model/',null=False,blank = False,verbose_name = "Rasm filesni")
+    date = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.name_eng

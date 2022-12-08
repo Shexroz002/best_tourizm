@@ -5,7 +5,7 @@ from .models import TarixiyTurizmRasmlari,BizningGalereyamiz,BoglanishModel,\
                     BizningRestoranlarhaqida,BizningSavdoMarkazlarniRasmlari,KorgazmalarRasmlari,\
                     TurizmTurlari,LogistikaTurlarimiz,BizningLogistikaRasmlari,Xodimlar,\
                     BizningSavdoMarkazlarhaqida,SafarTurizmRasmlari,YangiliklarModel,\
-                    EtnikTurizmModel,ExtremalTurizmModel,SafarTurizmModel
+                    EtnikTurizmModel,ExtremalTurizmModel,SafarTurizmModel,HammaSahifadaChiqadiganRasmlarModel
 from .serializers import TarixiyTurizmRasmlariSerializerUZB,TarixiyTurizmRasmlariSerializerRU,TarixiyTurizmRasmlariSerializerENG,\
                         BizningGalereyamizSerializer,BoglanishModelSerializer,\
                         BizBoglanishUchunModelSerializerUZB,BizBoglanishUchunModelSerializerRU,BizBoglanishUchunModelSerializerENG,\
@@ -21,7 +21,8 @@ from .serializers import TarixiyTurizmRasmlariSerializerUZB,TarixiyTurizmRasmlar
                         SafarTurizmModelSerializerRU,SafarTurizmModelSerializerENG,YangiliklarModelSerializerENG,\
                         YangiliklarModelSerializerRU,YangiliklarModelSerializerUZB,EtnikTurizmModelSerializerENG,\
                         EtnikTurizmModelSerializerRU,EtnikTurizmModelSerializerUZB,ExtremalTurizmModelSerializerENG,\
-                        ExtremalTurizmModelSerializerRU,ExtremalTurizmModelSerializerUZB           
+                        ExtremalTurizmModelSerializerRU,ExtremalTurizmModelSerializerUZB,HammaSahifadaChiqadiganRasmlarModelSerializerUZB,\
+                        HammaSahifadaChiqadiganRasmlarModelSerializerRU,HammaSahifadaChiqadiganRasmlarModelSerializerENG       
 from rest_framework import status
 from rest_framework import response
 from rest_framework import views
@@ -227,3 +228,15 @@ class ExtremalTurizmModelAPIViews(views.APIView):
         if language == 'eng':
             return response.Response(ExtremalTurizmModelSerializerENG(etnik,many=True).data,status=status.HTTP_200_OK)
         return response.Response(ExtremalTurizmModelSerializerUZB(etnik,many=True).data,status=status.HTTP_200_OK)
+
+class HammaSahifadaChiqadiganRasmlarModelAPIViews(views.APIView):
+    def get(self,request):
+        language  = request.GET.get('language', None)
+        all_data = HammaSahifadaChiqadiganRasmlarModel.objects.all()
+        if language == 'uzb':
+            return response.Response(HammaSahifadaChiqadiganRasmlarModelSerializerUZB(all_data,many=True).data,status=status.HTTP_200_OK)
+        if language == 'rus':
+            return response.Response(HammaSahifadaChiqadiganRasmlarModelSerializerRU(all_data,many=True).data,status=status.HTTP_200_OK)
+        if language == 'eng':
+            return response.Response(HammaSahifadaChiqadiganRasmlarModelSerializerENG(all_data,many=True).data,status=status.HTTP_200_OK)
+        return response.Response(HammaSahifadaChiqadiganRasmlarModelSerializerUZB(all_data,many=True).data,status=status.HTTP_200_OK)
