@@ -5,7 +5,7 @@ from .models import TarixiyTurizmRasmlari,BizningGalereyamiz,BoglanishModel,\
                     TurizmTurlari,LogistikaTurlarimiz,BizningLogistikaRasmlari,Xodimlar,\
                     BizningSavdoMarkazlarhaqida,SafarTurizmRasmlari,YangiliklarModel,\
                     EtnikTurizmModel,ExtremalTurizmModel,YangiliklarRasmlari,ExtremalTurizmRasmlari,\
-                    EtnikTurizmRasmlari,SafarTurizmModel
+                    EtnikTurizmRasmlari,SafarTurizmModel,HammaSahifadaChiqadiganRasmlarModel
 
 admin.site.register(TarixiyTurizmRasmlari)
 admin.site.register(BizningGalereyamiz)
@@ -29,5 +29,6 @@ admin.site.register(ExtremalTurizmRasmlari)
 admin.site.register(EtnikTurizmRasmlari)
 admin.site.register(SafarTurizmModel)
 admin.site.register(SafarTurizmRasmlari)
+admin.site.register(HammaSahifadaChiqadiganRasmlarModel)
 
 
